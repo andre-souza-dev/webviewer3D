@@ -1,0 +1,49 @@
+/*csslint universal-selector: false*/
+
+/*region Thirdparty*/
+
+/*Ion.RangeSlider BEGIN*/
+.irs-slider {
+    background: #85cee4;
+}
+
+/*Ion.RangeSlider END*/
+
+/*endregion*/
+
+/*region Components*/
+
+/* psol.components.ViewBase BEGIN */
+.ComponentCustomizeViewBaseButtonColor {
+    background-color: #85cee4;
+}
+
+.ComponentCustomizeViewBaseButtonColor:hover {
+    background-color: #73bbce;
+}
+
+/* psol.components.View END */
+
+/* psol.components.DialogBase BEGIN */
+.ComponentCustomizeDialogBaseDialogHeaderColor {
+    color: #85cee4;
+}
+
+/* psol.components.DialogBase END */
+
+/* psol.components.Table BEGIN*/
+.ComponentCustomizeTableColumnHeaderColor {
+    background-color: #85cee4;
+}
+
+th.ComponentCustomizeTableCurrentRowHeaderColor[data-current=true] {
+    background-color: #85cee4;
+}
+
+.ComponentCustomizeTableMaxHeight {
+    max-height: 500px;
+}
+
+/* psol.components.Table END*/
+
+/*endregion*/

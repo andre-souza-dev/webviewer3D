@@ -1,0 +1,32 @@
+<svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 96 96">
+  <defs>
+    <style>
+      .border-thick--dashed {
+        fill: none;
+        stroke: #5b6166;
+        stroke-miterlimit: 10;
+        stroke-width: 3px;
+        stroke-dasharray: 6;
+      }
+
+      .solid-medium {
+        fill: #acafb2;
+      }
+
+      .transparent-dark {
+        fill: #5b6166;
+        fill-rule: evenodd;
+        opacity: 0.75;
+      }
+    </style>
+  </defs>
+  <g id="actToggleCameraMode">
+    <line class="border-thick--dashed" x1="87.27" y1="63.72" x2="47.73" y2="41.28"/>
+    <polygon class="solid-medium" points="9 31.22 9 63.6 48 41.33 48 8.95 9 31.22"/>
+    <polygon class="transparent-dark" points="31 45.02 31 77.4 70 55.13 70 22.75 31 45.02"/>
+    <polygon class="border-thick--dashed" points="48 55.67 48 87.05 87 64.78 87 33.4 48 55.67"/>
+    <line class="border-thick--dashed" x1="48.27" y1="53.72" x2="8.73" y2="31.28"/>
+    <line class="border-thick--dashed" x1="86.27" y1="32.72" x2="46.73" y2="10.28"/>
+    <line class="border-thick--dashed" x1="48.27" y1="86.72" x2="8.73" y2="64.28"/>
+  </g>
+</svg>

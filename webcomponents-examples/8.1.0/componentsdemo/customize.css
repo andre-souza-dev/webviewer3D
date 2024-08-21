@@ -1,0 +1,105 @@
+/* Thirdparty BEGIN */
+/* Ion.RangeSlider BEGIN*/
+.irs-slider {
+  background: #9ab6ca;
+}
+/* Ion.RangeSlider END*/
+/* Thirdparty END */
+
+/* Components BEGIN */
+/* psol.components.* BEGIN */
+.ComponentCustomizeAll * {
+}
+/* psol.components.* END */
+
+/* psol.components.ViewBase BEGIN */
+.ComponentCustomizeViewBaseButtonColor {
+  background: #9ab6ca;
+}
+.ComponentCustomizeViewBaseIconButtonSize {
+}
+
+.ComponentCustomizeViewBaseCheckbox {
+}
+.ComponentCustomizeViewBaseRadiobtn {
+}
+/* psol.components.ViewBase END */
+
+/* psol.components.DialogBase BEGIN */
+.ComponentCustomizeDialogBaseDialog {
+}
+.ComponentCustomizeDialogBaseDialogContainer {
+}
+.ComponentCustomizeDialogBaseDialogHeader {
+}
+.ComponentCustomizeDialogBaseDialogHeaderColor {
+}
+.ComponentCustomizeDialogBaseDialogHeaderCloseButton {
+}
+.ComponentCustomizeDialogBaseDialogContent {
+}
+.ComponentCustomizeDialogBaseDialogFooter {
+}
+.ComponentCustomizeDialogBaseDialogButtonContainer {
+}
+.ComponentCustomizeViewBaseButtonColor {
+}
+.ComponentCustomizeDialogBaseDialogFullWidth {
+}
+.ComponentCustomizeDialogBaseDialogFullHeight {
+}
+.ComponentCustomizeDialogBaseDialogButton {
+}
+/* psol.components.DialogBase END */
+
+/* psol.components.DialogEditTableVar BEGIN */
+.ComponentCustomizeDialogEditTableVarFWValues {
+}
+.ComponentCustomizeDialogEditTableVarFWValuesItem {
+}
+.ComponentCustomizeDialogEditTableVarFWRangeResolved {
+}
+.ComponentCustomizeDialogEditTableVarSliderContainer {
+}
+/* psol.components.DialogEditTableVar END */
+
+/* psol.components.Table BEGIN*/
+.ComponentCustomizeTable * {
+}
+.ComponentCustomizeTableMaxHeight {
+}
+.ComponentCustomizeTableColumnHeaderColor {
+  background-color: #9ab6ca;
+}
+th.ComponentCustomizeTableCurrentRowHeaderColor {
+  background-color: #dae1e5;
+}
+th.ComponentCustomizeTableCurrentRowHeaderColor[data-current=true] {
+  background-color: #9ab6ca;
+}
+.ComponentCustomizeTableColumnHeaderTextColor {
+  color: #ffffff;
+}
+.ComponentCustomizeTableColumnHeaderDescTextColor {
+  color: #ffffff;
+}
+.ComponentCustomizeTableCurrentRowDescColor {
+  color: #326283;
+}
+th.ComponentCustomizeTableCurrentRowHeaderColor[data-current=true] .ComponentCustomizeTableCurrentRowDescColor {
+  color: #ffffff;
+}
+/* psol.components.Table END*/
+
+/* psol.components.WebViewer3D BEGIN*/
+.ComponentCustomizeWebViewer3DMenuItem {
+}
+.ComponentCustomizeWebViewer3DRadialMenuContainer {
+}
+/* psol.components.WebViewer3D END*/
+
+/* psol.components.SearchBar BEGIN*/
+.ComponentCustomizeSearchBarResetColor {
+}
+/* psol.components.SearchBar END*/
+/* Components END */

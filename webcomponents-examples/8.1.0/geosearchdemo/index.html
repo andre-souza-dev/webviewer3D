@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Geosearch Demo</title>
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1, minimum-scale=1" />
+    <!--meta name="viewport" content="width=device-width, initial-scale=1"-->
+
+    <!-- Allow web app to be run in full-screen mode. -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <!-- Configure the status bar. -->
+    <!--meta name="apple-mobile-web-app-status-bar-style" content="black"-->
+
+    <!-- Android theme color for chrome 39+ -->
+    <meta name="theme-color" content="#9ab6ca" />
+
+    <!-- favicon/appicon-->
+
+    <!-- webcomponents styles -->
+    <link rel="stylesheet" href="/webcomponents/8.1.0/api/css/thirdparty.min.css?v=1680698656116">
+    <link rel="stylesheet" href="/webcomponents/8.1.0/api/css/psol.components.min.css?v=1680698656116">
+
+    <!-- webapp styles -->
+    <link rel="stylesheet" href="/webcomponents-examples/8.1.0/geosearchdemo/css/geosearchdemo.min.css?v=1680698656116">
+
+    <!-- thirdparty scripts -->
+    <script src="/webcomponents-examples/8.1.0/geosearchdemo/thirdparty/jquery.min.js?v=1680698656116"></script>
+
+    <!-- webcomponents scripts -->
+    <script src="/webcomponents/8.1.0/api/js/fabric.min.js?v=1680698656116"></script>
+    <script src="/webcomponents/8.1.0/api/js/quill.min.js?v=1680698656116"></script>
+    <script src="/webcomponents/8.1.0/api/js/thirdparty.min.js?v=1680698656116"></script>
+    <script src="/webcomponents/8.1.0/api/js/psol.components.min.js?v=1680698656116"></script>
+
+    <!-- webapp scripts -->
+    <script src="/webcomponents-examples/8.1.0/geosearchdemo/js/geosearchdemo.js?v=1680698656116"></script>
+
+</head>
+
+<body>
+    <div class="pageBody" id="pageBody">
+        <div class="header">
+            <div class="backButton"></div>
+            <div class="title">Title</div>
+            <div class="makeScreenshot">Screenshot</div>
+
+            <div class="orderButton">Order</div>
+
+        </div>
+        <div class="geosearch" id="searchform">
+            <p>
+                <div class="geosearch searchIputContainer" id="searchbox">
+                    <div class="geosearch" id="searchfield">
+                        <input type="text" name="searchtext" class="geosearch" id="searchtext" placeholder="Suchtext" />
+                    </div>
+                </div>
+                <div name="startTextSearch" class="textsearch custom-input" id="startTextSearch">Text Suche Starten</div>
+                <div name="startGeoSearch" class="geosearch custom-input" id="startGeoSearch">Geo Suche Starten</div>
+            </p>
+            <label for="file1" class="custom-input">STL</label>
+            <input type="file" name="file1" class="custom-input" id="file1" />
+        </div>
+        <div class="tabCtrlPage active" data-name="table">
+            <div class="tableComponentContainer"></div>
+        </div>
+        <div class="tabCtrlPage" data-name="viewer">
+            <div class="viewerComponentContainer">
+                <div class="View3D"></div>
+                <div class="View2D"></div>
+            </div>
+            <div class="show3dButton">3D</div>
+            <div class="show2dButton">2D</div>
+        </div>
+
+        <div class="indexComponentContainer"></div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+{
+  "chinese": {
+    "Bauteile werden gesucht...": "在搜索零部件...",
+    "Bitte warten...": "请稍侯...",
+    "Ihre Suchanfrage lieferte keine Ergebnisse": "没有您要搜索的结果",
+    "Keine Ergebnisse bei einer Ähnlichkeit von %1% gefunden.": "没有找到和%1%相似的零部件.",
+    "Suchergebnisse": "搜索结果"
+  },
+  "chinese_traditional": {
+    "Bauteile werden gesucht...": "在搜索零部件...",
+    "Bitte warten...": "請稍侯...",
+    "Ihre Suchanfrage lieferte keine Ergebnisse": "没有您要搜索的结果",
+    "Keine Ergebnisse bei einer Ähnlichkeit von %1% gefunden.": "找不到相似度為%1%的結果。",
+    "Suchergebnisse": "搜索結果"
+  },
+  "english": {
+    "Bauteile werden gesucht...": "Searching components...",
+    "Bitte warten...": "Please wait...",
+    "Ihre Suchanfrage lieferte keine Ergebnisse": "There are no results for your request",
+    "Keine Ergebnisse bei einer Ähnlichkeit von %1% gefunden.": "No result with a similarity of %1% found.",
+    "Suchergebnisse": "Search results"
+  },
+  "french": {
+    "Bauteile werden gesucht...": "Cherche composants...",
+    "Bitte warten...": "Veuillez patienter...",
+    "Ihre Suchanfrage lieferte keine Ergebnisse": "Votre recherche ne donne aucun résultat",
+    "Keine Ergebnisse bei einer Ähnlichkeit von %1% gefunden.": "Aucun résultat présentant une similarité %1% n'a été trouvé.",
+    "Suchergebnisse": "Résultats de recherche"
+  },
+  "german": {},
+  "italian": {
+    "Bauteile werden gesucht...": "Ricerca dei componenti in corso...",
+    "Bitte warten...": "Attendere prego...",
+    "Ihre Suchanfrage lieferte keine Ergebnisse": "La ricerca non ha prodotto risultati",
+    "Keine Ergebnisse bei einer Ähnlichkeit von %1% gefunden.": "Nessun risultato per una similarità %1% ",
+    "Suchergebnisse": "Risultati ricerca"
+  },
+  "japanese": {
+    "Bauteile werden gesucht...": "コンポーネントを探しています...",
+    "Bitte warten...": "しばらくお待ちください...",
+    "Ihre Suchanfrage lieferte keine Ergebnisse": "リクエスト結果はありません",
+    "Keine Ergebnisse bei einer Ähnlichkeit von %1% gefunden.": " %1 ％の類似性が見つかりません。",
+    "Suchergebnisse": "検索結果"
+  },
+  "korean": {
+    "Bauteile werden gesucht...": "구성 요소를 찾고 있습니다...",
+    "Bitte warten...": "기다려 주십시오",
+    "Ihre Suchanfrage lieferte keine Ergebnisse": "요청에 대한 결과가 없습니다.",
+    "Keine Ergebnisse bei einer Ähnlichkeit von %1% gefunden.": "%1%과 유사성에 관한 결과를 발견하지 못했습니다.",
+    "Suchergebnisse": "결과 검색"
+  },
+  "russian": {
+    "Bauteile werden gesucht...": "Поиск деталей...",
+    "Bitte warten...": "Пожалуйста, подождите...",
+    "Ihre Suchanfrage lieferte keine Ergebnisse": "Ваш запрос поиска не дал результатов",
+    "Keine Ergebnisse bei einer Ähnlichkeit von %1% gefunden.": "Нет результатов при степени подобия %1.",
+    "Suchergebnisse": "Результаты поиска"
+  },
+  "spanish": {
+    "Bauteile werden gesucht...": "Buscando piezas...",
+    "Bitte warten...": "Espere por favor...",
+    "Ihre Suchanfrage lieferte keine Ergebnisse": "Para su búsqueda no se encontraron resultados",
+    "Keine Ergebnisse bei einer Ähnlichkeit von %1% gefunden.": "No se han encontrado resultados para la semejanza de %1.",
+    "Suchergebnisse": "Resultados de búsqueda"
+  },
+  "turkish": {
+    "Bauteile werden gesucht...": "Searching components...",
+    "Bitte warten...": "Lütfen bekleyin...",
+    "Ihre Suchanfrage lieferte keine Ergebnisse": "There are no results for your request",
+    "Keine Ergebnisse bei einer Ähnlichkeit von %1% gefunden.": "No result with a similarity of %1% found.",
+    "Suchergebnisse": "Arama sonuçları"
+  }
+}

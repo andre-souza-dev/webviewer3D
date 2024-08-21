@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>TableCompare</title>
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1, minimum-scale=1" />
+    <!-- webcomponents styles -->
+    <link rel="stylesheet" href="/webcomponents/8.1.0/api/css/thirdparty.min.css?v=1680698656149">
+    <link rel="stylesheet" href="/webcomponents/8.1.0/api/css/psol.components.min.css?v=1680698656149">
+
+    <!-- webapp styles -->
+    <!-- webapp:css -->
+    <!-- endinject -->
+
+    <!-- thirdparty scripts -->
+    <script src="/webcomponents-examples/8.1.0/tableCompare/thirdparty/jquery.min.js?v=1680698656149"></script>
+    <script>
+        jQuery.noConflict();
+
+    </script>
+
+    <!-- webcomponents scripts -->
+    <script src="/webcomponents/8.1.0/api/js/fabric.min.js?v=1680698656149"></script>
+    <script src="/webcomponents/8.1.0/api/js/quill.min.js?v=1680698656149"></script>
+    <script src="/webcomponents/8.1.0/api/js/thirdparty.min.js?v=1680698656149"></script>
+    <script src="/webcomponents/8.1.0/api/js/psol.components.min.js?v=1680698656149"></script>
+
+    <!-- webapp scripts -->
+    <!-- webapp:js -->
+    <!-- endinject -->
+</head>
+
+<body>
+    <div class="table-compare" style="width:100%;">
+        <script type="text/javascript">
+            var $ = jQuery;
+            var settings = {
+                $container: $('.table-compare'),
+                show3dCompareControls: true
+            };
+            var tablecompare = new psol.components.TableCompare(settings);
+            tablecompare.onCompare3dPartSelected = function(parts) {
+                console.log(parts);
+            };
+            var optionsInfo = [{
+                    path: 'ahp/blockzylinder/blockzylinder.prj'
+                },
+                {
+                    path: 'eaton_hydraulics/hydraulic_components/vickers/re_parts/re_asmtab.prj'
+                },
+                {
+                    path: 'misumi/metric/01_linear_shafts/01_cn/csfj.prj'
+                },
+                {
+                    path: 'rose_krieger/linearkomponenten/pool_lineartechnik/movetec/spindel_konfigurator/e/e_asmtab.prj'
+                }
+            ];
+
+            tablecompare.show().done(function() {
+
+                tablecompare.loadByVarsets(optionsInfo).then(() => tablecompare.setPartsFor3dCompare(2, 1));
+
+            });
+
+        </script>
+    </div>
+</body>
+
+</html>

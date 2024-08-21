@@ -1,0 +1,63 @@
+{
+  "chinese": {
+    "Kataloge": "目录",
+    "Suchergebnisse": "搜索结果",
+    "Tabelle": "开放式列表",
+    "Vorschau": "预览"
+  },
+  "chinese_traditional": {
+    "Kataloge": "目錄",
+    "Suchergebnisse": "搜索結果",
+    "Tabelle": "開放式列表",
+    "Vorschau": "預覽"
+  },
+  "english": {
+    "Kataloge": "Catalogs",
+    "Suchergebnisse": "Search results",
+    "Tabelle": "Table",
+    "Vorschau": "Preview"
+  },
+  "french": {
+    "Kataloge": "Catalogues",
+    "Suchergebnisse": "Résultats de recherche",
+    "Tabelle": "Tableau",
+    "Vorschau": "Aperçu"
+  },
+  "german": {},
+  "italian": {
+    "Kataloge": "Cataloghi",
+    "Suchergebnisse": "Risultati ricerca",
+    "Tabelle": "Tabella",
+    "Vorschau": "Anteprima"
+  },
+  "japanese": {
+    "Kataloge": "カタログ",
+    "Suchergebnisse": "検索結果",
+    "Tabelle": "テーブル",
+    "Vorschau": "プレビュー"
+  },
+  "korean": {
+    "Kataloge": "카탈로그",
+    "Suchergebnisse": "결과 검색",
+    "Tabelle": "테이블",
+    "Vorschau": "미리보기"
+  },
+  "russian": {
+    "Kataloge": "Каталоги",
+    "Suchergebnisse": "Результаты поиска",
+    "Tabelle": "Таблица",
+    "Vorschau": "Просмотр"
+  },
+  "spanish": {
+    "Kataloge": "Catálogos",
+    "Suchergebnisse": "Resultados de búsqueda",
+    "Tabelle": "Tabla",
+    "Vorschau": "Previsualización"
+  },
+  "turkish": {
+    "Kataloge": "Kataloglar",
+    "Suchergebnisse": "Arama sonuçları",
+    "Tabelle": "Tablo",
+    "Vorschau": "Görünüş"
+  }
+}

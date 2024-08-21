@@ -1,0 +1,722 @@
+
+<!DOCTYPE html>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gulp Markdown Docs</title>
+  <style>/*!
+ * Agate by Taufik Nurrohman <https://github.com/tovic>
+ * ----------------------------------------------------
+ *
+ * #ade5fc
+ * #a2fca2
+ * #c6b4f0
+ * #d36363
+ * #fcc28c
+ * #fc9b9b
+ * #ffa
+ * #fff
+ * #333
+ * #62c8f3
+ * #888
+ *
+ */
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: .5em;
+  background: #333;
+  color: white;
+  -webkit-text-size-adjust: none;
+}
+
+.asciidoc .hljs-title,
+.hljs-label,
+.hljs-tag .hljs-title,
+.hljs-prompt,
+.http .hljs-request {
+  font-weight: bold;
+}
+
+.hljs-change,
+.hljs-code {
+  font-style: italic;
+}
+
+.hljs-tag,
+.ini .hljs-title {
+  color: #62c8f3;
+}
+
+.hljs-id,
+.hljs-cbracket,
+.hljs-tag .hljs-value {
+  color: #ade5fc;
+}
+
+.hljs-string,
+.hljs-bullet {
+  color: #a2fca2;
+}
+
+.hljs-type,
+.hljs-variable,
+.hljs-name,
+.actionscript .hljs-title,
+.aspectj .hljs-annotation,
+.aspectj .hljs-title,
+.hljs-attribute,
+.hljs-change,
+.hljs-blockquote,
+.hljs-built_in {
+  color: #ffa;
+}
+
+.hljs-number,
+.hljs-hexcolor,
+.hljs-link_label,
+.hljs-link_reference {
+  color: #d36363;
+}
+
+.hljs-keyword,
+.hljs-literal,
+.hljs-constant,
+.css .hljs-tag,
+.hljs-typename,
+.hljs-winutils {
+  color: #fcc28c;
+}
+
+.hljs-comment,
+.hljs-cdata,
+.hljs-preprocessor,
+.hljs-annotation,
+.hljs-decorator,
+.hljs-doctype,
+.hljs-deletion,
+.hljs-shebang,
+.apache .hljs-sqbracket,
+.tex .hljs-formula,
+.hljs-header,
+.hljs-horizontal_rule,
+.hljs-code {
+  color: #888;
+}
+
+.hljs-regexp,
+.hljs-attr_selector {
+  color: #c6b4f0;
+}
+
+.hljs-important,
+.hljs-doctype,
+.hljs-pi,
+.hljs-chunk,
+.actionscript .hljs-type,
+.hljs-shebang,
+.hljs-pragma,
+.http .hljs-attribute {
+  color: #fc9b9b;
+}
+
+.hljs-deletion {
+  background-color: #fc9b9b;
+  color: #333;
+}
+
+.hljs-addition {
+  background-color: #a2fca2;
+  color: #333;
+}
+
+.hljs a,
+.hljs-tag .hljs-attribute {
+  color: inherit;
+}
+
+.hljs a:focus,
+.hljs a:hover {
+  color: inherit;
+  text-decoration: underline;
+}
+</style><style>body {
+  margin-left: 35vw;
+  font-family: sans-serif;
+}
+pre {
+  /* matches solarized_dark */
+  background: #002b36;
+  color: #839496;
+  padding: 1em;
+  margin: 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+td,
+th {
+  border: 1px solid black;
+  max-width: 18vw;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+table {
+  border-collapse: collapse;
+  margin-right: 2vw;
+}
+.doc-nav {
+  position: fixed;
+  width: 32vw;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 1em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.doc-nav a {
+  text-decoration: none;
+}
+.doc-nav a:hover {
+  text-decoration: underline;
+}
+.doc-nav-group {
+  list-style: none;
+  padding: 0;
+}
+.doc-nav-group-header {
+  display: block;
+  padding: 0.5em 0;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.doc-nav-group-header,
+.doc-nav-group-header a:active,
+.doc-nav-group-header a:visited {
+  color: #212121;
+}
+.doc-nav-item {
+  padding: 0.5em 0 0.5em 1.5em;
+}
+.doc-nav-item a:active,
+.doc-nav-item a:visited {
+  color: #454545;
+}
+.doc-section-header {
+  font-size: 1.7em;
+  border-bottom: 1px solid #839496;
+  padding-bottom: 0.5em;
+}
+.doc-article {
+  padding-bottom: 4em;
+  display: block;
+}
+.doc-article h1 {
+  font-size: 1.6em;
+}
+.doc-article + .doc-article {
+  padding-top: 3em;
+  border-top: 1px solid #323232;
+}
+</style></head>
+  <body>
+    <section class="doc-nav"><ul class="doc-nav-group"><li class="doc-nav-group-header"><a href="#webviewer3D">WebViewer3D</a></li><li class="doc-nav-item"><a href="#webviewer3d_minimal">WebViewer3D minimal example</a></li><li class="doc-nav-item"><a href="#webviewer3d_actions">WebViewer3D actions</a></li></ul></section>
+    <section class="doc-content"><section class="doc-section"><h1 class="doc-section-header"><a class="doc-nav-anchor" name="webviewer3D"></a>WebViewer3D</h1><article class="doc-article"><a class="doc-nav-anchor" name="webviewer3d_minimal"></a><h1 id="webviewer3d-minimal-example">WebViewer3D minimal example</h1>
+<p>This is a tutorial about the WebViewer3D WebComponent</p>
+<h2 id="screenshot">Screenshot</h2>
+<p><img src="img/webviewer3d-01.png" alt="screenshot"></p>
+<h2 id="html-file">HTML file</h2>
+<pre><code class="lang-html"><span class="hljs-doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">html</span> <span class="hljs-attribute">lang</span>=<span class="hljs-value">&quot;en&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">charset</span>=<span class="hljs-value">&quot;UTF-8&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">http-equiv</span>=<span class="hljs-value">&quot;X-UA-Compatible&quot;</span> <span class="hljs-attribute">content</span>=<span class="hljs-value">&quot;IE=edge&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">&quot;viewport&quot;</span> <span class="hljs-attribute">content</span>=<span class="hljs-value">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">title</span>&gt;</span>WebViewer3D Demo<span class="hljs-tag">&lt;/<span class="hljs-title">title</span>&gt;</span>
+
+    <span class="hljs-comment">&lt;!-- stylesheet includes --&gt;</span>
+    <span class="hljs-comment">&lt;!-- 3rd party styles --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">link</span> <span class="hljs-attribute">rel</span>=<span class="hljs-value">&quot;stylesheet&quot;</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;text/css&quot;</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;webcomponents/8.1.0/api/css/thirdparty.min.css&quot;</span> /&gt;</span>
+    <span class="hljs-comment">&lt;!-- PSOL Web Components API styles --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">link</span> <span class="hljs-attribute">rel</span>=<span class="hljs-value">&quot;stylesheet&quot;</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;text/css&quot;</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;webcomponents/8.1.0/api/css/psol.components.min.css&quot;</span> /&gt;</span>
+
+    <span class="hljs-comment">&lt;!-- script includes --&gt;</span>
+    <span class="hljs-comment">&lt;!-- 3rd party scripts --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;text/javascript&quot;</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">&quot;webcomponents/8.1.0/api/js/thirdparty.min.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+    <span class="hljs-comment">&lt;!-- PSOL Web Components API script(s) --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;text/javascript&quot;</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">&quot;webcomponents/8.1.0/api/js/psol.components.min.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">style</span>&gt;</span><span class="css">
+        <span class="hljs-id">#viewer</span> <span class="hljs-rules">{
+            <span class="hljs-rule"><span class="hljs-attribute">width</span>:<span class="hljs-value"> <span class="hljs-number">640px</span></span></span>;
+            <span class="hljs-rule"><span class="hljs-attribute">height</span>:<span class="hljs-value"> <span class="hljs-number">480px</span></span></span>;
+        }</span>
+    </span><span class="hljs-tag">&lt;/<span class="hljs-title">style</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">&quot;viewer&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">&quot;viewer.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">html</span>&gt;</span>
+</code></pre>
+<h2 id="viewer-js-file">viewer.js file</h2>
+<pre><code class="lang-JavaScript">psol.core.setServiceBaseUrl(<span class="hljs-string">&apos;https://webapi.partcommunity.com&apos;</span>);
+
+psol.core.setUserInfo({
+    server_type: <span class="hljs-string">&apos;INSERT_YOUR_SERVER_TYPE_HERE&apos;</span>,
+    title: <span class="hljs-string">&apos;Herr&apos;</span>,
+    firstname: <span class="hljs-string">&apos;Max&apos;</span>,
+    lastname: <span class="hljs-string">&apos;Mustermann&apos;</span>,
+    userfirm: <span class="hljs-string">&apos;CADENAS GmbH&apos;</span>,
+    street: <span class="hljs-string">&apos;Schernecker Str. 5&apos;</span>,
+    zip: <span class="hljs-string">&apos;86767&apos;</span>,
+    city: <span class="hljs-string">&apos;Augsburg&apos;</span>,
+    country: <span class="hljs-string">&apos;de&apos;</span>,
+    phone: <span class="hljs-string">&apos;+49 (0) 821 2 58 58 0-0&apos;</span>,
+    fax: <span class="hljs-string">&apos;+49 (0) 821 2 58 58 0-999&apos;</span>,
+    email: <span class="hljs-string">&apos;info@cadenas.de&apos;</span>
+});
+
+const settings = {
+    <span class="hljs-variable">$container</span>: $(<span class="hljs-string">&apos;#viewer&apos;</span>),
+    viewerBackendType: psol.components.WebViewer3D.ViewerBackends.WebGL,
+    webglViewerSettings: {}
+};
+
+const viewer = new psol.components.WebViewer3D(settings);
+
+viewer.show().<span class="hljs-keyword">then</span>(() =&gt; {
+    viewer.loadByVarset(<span class="hljs-string">&apos;ahp/blockzylinder/blockzylinder.prj&apos;</span>);
+});
+</code></pre>
+</article><article class="doc-article"><a class="doc-nav-anchor" name="webviewer3d_actions"></a><h1 id="webviewer3d-action-list">WebViewer3D action list</h1>
+<p>This is a list of all actions the WebViewer3D component supports.</p>
+<table>
+<thead>
+<tr>
+<th>Icon</th>
+<th style="text-align:center">Internal action name</th>
+<th style="text-align:center">Description</th>
+<th style="text-align:center">Default (on/off)</th>
+<th style="text-align:center">Viewer Default position</th>
+<th style="text-align:center">Condition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="img/actionIcons/actLine.svg" alt="logo"></td>
+<td style="text-align:center">actLine</td>
+<td style="text-align:center">Line view</td>
+<td style="text-align:center">Off</td>
+<td style="text-align:center">Radialmenu =&gt; Menu Shading</td>
+<td style="text-align:center">No condition</td>
+</tr>
+<tr>
+<td><img src="img/actionIcons/actMeasureGrid.svg" alt="logo"></td>
+<td style="text-align:center">actMeasureGrid</td>
+<td style="text-align:center">Show measuring grid</td>
+<td style="text-align:center">Off</td>
+<td style="text-align:center">Radialmenu =&gt; Menu Special, Favorite Button Bar</td>
+<td style="text-align:center">No condition</td>
+</tr>
+<tr>
+<td><img src="img/actionIcons/actToggleCameraMode.svg" alt="logo"></td>
+<td style="text-align:center">actToggleCameraMode</td>
+<td style="text-align:center">Switch projection mode</td>
+<td style="text-align:center">Perspective Projection</td>
+<td style="text-align:center">Not visible by default</td>
+<td style="text-align:center">No condition</td>
+</tr>
+<tr>
+<td><img src="img/actionIcons/actShade.svg" alt="logo"></td>
+<td style="text-align:center">actShade</td>
+<td style="text-align:center">Shaded view</td>
+<td style="text-align:center">Off</td>
+<td style="text-align:center">Radialmenu =&gt; Menu Shading</td>
+<td style="text-align:center">No condition</td>
+</tr>
+<tr>
+<td><img src="img/actionIcons/actShadeLine.svg" alt="logo"></td>
+<td style="text-align:center">actShadeLine</td>
+<td style="text-align:center">Activate shaded view with edges</td>
+<td style="text-align:center">On</td>
+<td style="text-align:center">Radialmenu =&gt; Menu Shading</td>
+<td style="text-align:center">No condition</td>
+</tr>
+<tr>
+<td><img src="img/actionIcons/actAnimate.svg" alt="logo"></td>
+<td style="text-align:center">actAnimate</td>
+<td style="text-align:center">Animate rotation</td>
+<td style="text-align:center">Off</td>
+<td style="text-align:center">Radialmenu =&gt; Menu Rotation</td>
+<td style="text-align:center">Active by Default in VR mode</td>
+</tr>
+<tr>
+<td><img src="img/actionIcons/actFront.svg" alt="logo"></td>
+<td style="text-align:center">actFront</td>
+<td style="text-align:center">Front view (Z)</td>
+<td style="text-align:center">Off</td>
+<td style="text-align:center">Radialmenu =&gt; Menu Rotation</td>
+<td style="text-align:center">No condition</td>
+</tr>
+<tr>
+<td><img src="img/actionIcons/actBack.svg" alt="logo"></td>
+<td style="text-align:center">actBack</td>
+<td style="text-align:center">Rear view (-Z)</td>
+<td style="text-align:center">Off</td>
+<td style="text-align:center">Radialmenu =&gt; Menu Rotation</td>
+<td style="text-align:center">No condition</td>
+</tr>
+<tr>
+<td><img src="img/actionIcons/actLeft.svg" alt="logo"></td>
+<td style="text-align:center">actLeft</td>
+<td style="text-align:center">Left view (-X)</td>
+<td style="text-align:center">Off</td>
+<td style="text-align:center">Radialmenu =&gt; Menu Rotation</td>
+<td style="text-align:center">No condition</td>
+</tr>
+<tr>
+<td><img src="img/actionIcons/actRight.svg" alt="logo"></td>
+<td style="text-align:center">actRight</td>
+<td style="text-align:center">Right view (X)</td>
+<td style="text-align:center">Off</td>
+<td style="text-align:center">Radialmenu =&gt; Menu Rotation</td>
+<td style="text-align:center">No condition</td>
+</tr>
+<tr>
+<td><img src="img/actionIcons/actTop.svg" alt="logo"></td>
+<td style="text-align:center">actTop</td>
+<td style="text-align:center">Top view (Y)</td>
+<td style="text-align:center">Off</td>
+<td style="text-align:center">Radialmenu =&gt; Menu Rotation</td>
+<td style="text-align:center">No condition</td>
+</tr>
+<tr>
+<td><img src="img/actionIcons/actBottom.svg" alt="logo"></td>
+<td style="text-align:center">actBottom</td>
+<td style="text-align:center">Bottom view (-Y)</td>
+<td style="text-align:center">Off</td>
+<td style="text-align:center">Radialmenu =&gt; Menu Rotation</td>
+<td style="text-align:center">No condition</td>
+</tr>
+<tr>
+<td><img src="img/actionIcons/actIsometric.svg" alt="logo"></td>
+<td style="text-align:center">actIsometric</td>
+<td style="text-align:center">Isometric view</td>
+<td style="text-align:center">Off</td>
+<td style="text-align:center">Radialmenu =&gt; Menu Rotation</td>
+<td style="text-align:center">No condition</td>
+</tr>
+<tr>
+<td><img src="img/actionIcons/actAnaglyph.svg" alt="logo"></td>
+<td style="text-align:center">actAnaglyph</td>
+<td style="text-align:center">Activate anaglyphic view. Mode for 3D presenation with red cyan goggles</td>
+<td style="text-align:center">Off</td>
+<td style="text-align:center">Radialmenu =&gt; Menu VR</td>
+<td style="text-align:center">3D red cyan goggles are required</td>
+</tr>
+<tr>
+<td><img src="img/actionIcons/actZoomall.svg" alt="logo"></td>
+<td style="text-align:center">actZoomall</td>
+<td style="text-align:center">Fit to screen</td>
+<td style="text-align:center">Off</td>
+<td style="text-align:center">Radialmenu =&gt; Menu Special</td>
+<td style="text-align:center">No condition</td>
+</tr>
+<tr>
+<td><img src="img/actionIcons/actZoomObject.svg" alt="logo"></td>
+<td style="text-align:center">actZoomObject</td>
+<td style="text-align:center">Zoom to object</td>
+<td style="text-align:center">Off</td>
+<td style="text-align:center">Radialmenu =&gt; Menu Special</td>
+<td style="text-align:center">No condition</td>
+</tr>
+<tr>
+<td><img src="img/actionIcons/actZoomCloser.svg" alt="logo"></td>
+<td style="text-align:center">actZoomCloser</td>
+<td style="text-align:center">Zoom to object</td>
+<td style="text-align:center">Off</td>
+<td style="text-align:center">Favorite Button Bar (Only in VR)</td>
+<td style="text-align:center">Active by default in VR mode</td>
+</tr>
+<tr>
+<td><img src="img/actionIcons/actZoomAway.svg" alt="logo"></td>
+<td style="text-align:center">actZoomAway</td>
+<td style="text-align:center">Zoom away from object</td>
+<td style="text-align:center">Off</td>
+<td style="text-align:center">Favorite Button Bar (Only in VR)</td>
+<td style="text-align:center">Active by default in VR mode</td>
+</tr>
+<tr>
+<td><img src="img/actionIcons/actSaveCameraParams.svg" alt="logo"></td>
+<td style="text-align:center">actSaveCameraParams</td>
+<td style="text-align:center">Save camera position and rotation</td>
+<td style="text-align:center">Off</td>
+<td style="text-align:center">Not visible by default</td>
+<td style="text-align:center">No condition</td>
+</tr>
+<tr>
+<td><img src="img/actionIcons/actCut.svg" alt="logo"></td>
+<td style="text-align:center">actCut</td>
+<td style="text-align:center">Cross-section</td>
+<td style="text-align:center">Off</td>
+<td style="text-align:center">Radialmenu =&gt; Menu Special, Favorite Button Bar</td>
+<td style="text-align:center">No condition</td>
+</tr>
+<tr>
+<td><img src="img/actionIcons/actCustomDimensions.svg" alt="logo"></td>
+<td style="text-align:center">actCustomDimensions</td>
+<td style="text-align:center">Show Dimensions</td>
+<td style="text-align:center">On</td>
+<td style="text-align:center">Radialmenu =&gt; Menu Special, Favorite Button Bar</td>
+<td style="text-align:center">Part needs to have custom dimensions defined</td>
+</tr>
+<tr>
+<td><img src="img/actionIcons/actExplosion.svg" alt="logo"></td>
+<td style="text-align:center">actExplosion</td>
+<td style="text-align:center">Exploded view</td>
+<td style="text-align:center">Off</td>
+<td style="text-align:center">Radialmenu =&gt; Menu Special</td>
+<td style="text-align:center">Only available, if explosion matrices are defined</td>
+</tr>
+<tr>
+<td><img src="img/actionIcons/actLabels.svg" alt="logo"></td>
+<td style="text-align:center">actLabels</td>
+<td style="text-align:center">Show labels</td>
+<td style="text-align:center">On</td>
+<td style="text-align:center">Radialmenu =&gt; Menu Special, Favorite Button Bar</td>
+<td style="text-align:center">Part needs to have labels defined</td>
+</tr>
+<tr>
+<td><img src="img/actionIcons/actHotSpots.svg" alt="logo"></td>
+<td style="text-align:center">actHotSpots</td>
+<td style="text-align:center">Show/Hide HotSpots</td>
+<td style="text-align:center">On</td>
+<td style="text-align:center">Radialmenu =&gt; Menu Special</td>
+<td style="text-align:center">Part needs to have hotspots defined</td>
+</tr>
+<tr>
+<td><img src="img/actionIcons/actFullscreen.svg" alt="logo"></td>
+<td style="text-align:center">actFullscreen</td>
+<td style="text-align:center">Full screen view</td>
+<td style="text-align:center">Off</td>
+<td style="text-align:center">Radialmenu =&gt; Menu VR</td>
+<td style="text-align:center">No condition</td>
+</tr>
+<tr>
+<td><img src="img/actionIcons/actPseudoFullscreen.svg" alt="logo"></td>
+<td style="text-align:center">actPseudoFullscreen</td>
+<td style="text-align:center">Window full screen view</td>
+<td style="text-align:center">Off</td>
+<td style="text-align:center">Radialmenu =&gt; Menu VR, Favorite Button Bar</td>
+<td style="text-align:center">No condition</td>
+</tr>
+<tr>
+<td><img src="img/actionIcons/actBluebox.svg" alt="logo"></td>
+<td style="text-align:center">actBluebox</td>
+<td style="text-align:center">Bluebox view</td>
+<td style="text-align:center">Off</td>
+<td style="text-align:center">Radialmenu =&gt; Menu VR</td>
+<td style="text-align:center">Only working correctly with Bluebox device</td>
+</tr>
+<tr>
+<td><img src="img/actionIcons/actDreamocHD3.svg" alt="logo"></td>
+<td style="text-align:center">actDreamocHD3</td>
+<td style="text-align:center">Dreamoc HD3 view</td>
+<td style="text-align:center">Off</td>
+<td style="text-align:center">Radialmenu =&gt; Menu VR</td>
+<td style="text-align:center">Only working correctly with Dreamoc HD3</td>
+</tr>
+<tr>
+<td><img src="img/actionIcons/actDreamocXL2.svg" alt="logo"></td>
+<td style="text-align:center">actDreamocXL2</td>
+<td style="text-align:center">Dreamoc XL2 view</td>
+<td style="text-align:center">Off</td>
+<td style="text-align:center">Radialmenu =&gt; Menu VR</td>
+<td style="text-align:center">Only working correctly with Dreamoc XL2 </td>
+</tr>
+<tr>
+<td><img src="img/actionIcons/actDreamocMOBILE.svg" alt="logo"></td>
+<td style="text-align:center">actDreamocMOBILE</td>
+<td style="text-align:center">Holographic pyramid</td>
+<td style="text-align:center">Off</td>
+<td style="text-align:center">Radialmenu =&gt; Menu VR</td>
+<td style="text-align:center">Only available on mobile devices</td>
+</tr>
+<tr>
+<td><img src="img/actionIcons/actTriTeQ3.svg" alt="logo"></td>
+<td style="text-align:center">actDRV</td>
+<td style="text-align:center">DRV Deep Reality Viewer</td>
+<td style="text-align:center">Off</td>
+<td style="text-align:center">Radialmenu =&gt; Menu VR</td>
+<td style="text-align:center">Only available on DRV (Deep Reality Viewer) device</td>
+</tr>
+<tr>
+<td><img src="img/actionIcons/actEnableHotSpots.svg" alt="logo"></td>
+<td style="text-align:center">actEnableHotSpots</td>
+<td style="text-align:center">Adding and editing of HotSpots. Add =&gt; Click on model, Edit =&gt; Click on HotSpot</td>
+<td style="text-align:center">Off</td>
+<td style="text-align:center">Not visible by default</td>
+<td style="text-align:center">No condition</td>
+</tr>
+<tr>
+<td><img src="img/actionIcons/actVR.svg" alt="logo"></td>
+<td style="text-align:center">actVR</td>
+<td style="text-align:center">Enter Virtual Reality mode</td>
+<td style="text-align:center">Off</td>
+<td style="text-align:center">Radialmenu =&gt; Menu VR, Favorite Button Bar</td>
+<td style="text-align:center">VR device required</td>
+</tr>
+<tr>
+<td><img src="img/actionIcons/actPseudoVR.svg" alt="logo"></td>
+<td style="text-align:center">actPseudoVR</td>
+<td style="text-align:center">Enter Virtual Reality mode without view changing</td>
+<td style="text-align:center">Off</td>
+<td style="text-align:center">Radialmenu =&gt; Menu VR, Favorite Button Bar</td>
+<td style="text-align:center">VR device required</td>
+</tr>
+<tr>
+<td><img src="img/actionIcons/actCameraBackground.svg" alt="logo"></td>
+<td style="text-align:center">actCameraBackground</td>
+<td style="text-align:center">Activate live background. Set your current camera focus as background</td>
+<td style="text-align:center">Off</td>
+<td style="text-align:center">Radialmenu =&gt; Menu Special</td>
+<td style="text-align:center">Only available on mobile devices with camera</td>
+</tr>
+<tr>
+<td><img src="img/actionIcons/actScreenShot.svg" alt="logo"></td>
+<td style="text-align:center">actScreenShot</td>
+<td style="text-align:center">Create screenshot of 3D view</td>
+<td style="text-align:center">Off</td>
+<td style="text-align:center">Radialmenu =&gt; Menu Special</td>
+<td style="text-align:center">No condition</td>
+</tr>
+<tr>
+<td><img src="img/actionIcons/act2D.svg" alt="logo"></td>
+<td style="text-align:center">act2D</td>
+<td style="text-align:center">View 2D dimensional drawings</td>
+<td style="text-align:center">Off</td>
+<td style="text-align:center">Not visible by default</td>
+<td style="text-align:center">No condition</td>
+</tr>
+<tr>
+<td><img src="img/actionIcons/actMeasure.svg" alt="logo"></td>
+<td style="text-align:center">actMeasure</td>
+<td style="text-align:center">Enable measure functions</td>
+<td style="text-align:center">Off</td>
+<td style="text-align:center">Radialmenu =&gt; Menu Special</td>
+<td style="text-align:center">Part needs to have measurable features defined. Only working with the GLTF format, not the PJV format.</td>
+</tr>
+<tr>
+<td><img src="img/actionIcons/actHelp.svg" alt="logo"></td>
+<td style="text-align:center">actHelp</td>
+<td style="text-align:center">Show help</td>
+<td style="text-align:center">Off</td>
+<td style="text-align:center">Radialmenu =&gt; Every submenu</td>
+<td style="text-align:center">No condition</td>
+</tr>
+<tr>
+<td><img src="img/actionIcons/actTeleport.svg" alt="logo"></td>
+<td style="text-align:center">actTeleport</td>
+<td style="text-align:center">Activate teleport mode, to move to selected position</td>
+<td style="text-align:center">Off</td>
+<td style="text-align:center">Not visible by default</td>
+<td style="text-align:center">No condition</td>
+</tr>
+<tr>
+<td><img src="img/actionIcons/actHoloLens.svg" alt="logo"></td>
+<td style="text-align:center">actHoloLens</td>
+<td style="text-align:center">Enter Hololens mode</td>
+<td style="text-align:center">Off</td>
+<td style="text-align:center">Radialmenu =&gt; Menu VR</td>
+<td style="text-align:center">Hololens device is required</td>
+</tr>
+<tr>
+<td><img src="img/actionIcons/actDrawing.svg" alt="logo"></td>
+<td style="text-align:center">actDrawing</td>
+<td style="text-align:center">Draw on canvas</td>
+<td style="text-align:center">Off</td>
+<td style="text-align:center">Radialmenu =&gt; Menu Special</td>
+<td style="text-align:center">No condition</td>
+</tr>
+<tr>
+<td><img src="img/actionIcons/actAR.svg" alt="logo"></td>
+<td style="text-align:center">actAR</td>
+<td style="text-align:center">Enter CADENAS AR mode</td>
+<td style="text-align:center">Off</td>
+<td style="text-align:center">Not visible by default</td>
+<td style="text-align:center">Only available in Cadenas mobile apps (e.g 3D CAD Models)</td>
+</tr>
+<tr>
+<td><img src="img/actionIcons/actAR.svg" alt="logo"></td>
+<td style="text-align:center">actExternalAR</td>
+<td style="text-align:center">Enter mobile device built-in AR mode</td>
+<td style="text-align:center">Off</td>
+<td style="text-align:center">Not visible by default</td>
+<td style="text-align:center">Only available on mobile devices which support AR</td>
+</tr>
+<tr>
+<td><img src="img/actionIcons/actOriginAxes.svg" alt="logo"></td>
+<td style="text-align:center">actOriginAxes</td>
+<td style="text-align:center">Show Origin Axes</td>
+<td style="text-align:center">Off</td>
+<td style="text-align:center">Radialmenu =&gt; Menu Special</td>
+<td style="text-align:center">No condition</td>
+</tr>
+<tr>
+<td><img src="img/actionIcons/actOverlay.svg" alt="logo"></td>
+<td style="text-align:center">actOverlay</td>
+<td style="text-align:center">Overlay parts</td>
+<td style="text-align:center">Off</td>
+<td style="text-align:center">Favorite Button Bar</td>
+<td style="text-align:center">Only available in compare mode</td>
+</tr>
+<tr>
+<td><img src="img/actionIcons/actOppose.svg" alt="logo"></td>
+<td style="text-align:center">actOppose</td>
+<td style="text-align:center">Show parts opposed</td>
+<td style="text-align:center">Off</td>
+<td style="text-align:center">Favorite Button Bar</td>
+<td style="text-align:center">Only available in compare mode</td>
+</tr>
+<tr>
+<td><img src="img/actionIcons/actCenterposition.svg" alt="logo"></td>
+<td style="text-align:center">actCenterposition</td>
+<td style="text-align:center">Original rotation and centered position</td>
+<td style="text-align:center">Off</td>
+<td style="text-align:center">Favorite Button Bar</td>
+<td style="text-align:center">Only available in compare mode</td>
+</tr>
+<tr>
+<td><img src="img/actionIcons/actOriginalposition.svg" alt="logo"></td>
+<td style="text-align:center">actOriginalposition</td>
+<td style="text-align:center">Original rotation and position</td>
+<td style="text-align:center">Off</td>
+<td style="text-align:center">Favorite Button Bar</td>
+<td style="text-align:center">Only available in compare mode</td>
+</tr>
+<tr>
+<td><img src="img/actionIcons/actTransparency.svg" alt="logo"></td>
+<td style="text-align:center">actTransparency</td>
+<td style="text-align:center">Toggle transparency</td>
+<td style="text-align:center">Off</td>
+<td style="text-align:center">Radialmenu =&gt; Menu Shading</td>
+<td style="text-align:center">No condition</td>
+</tr>
+<tr>
+<td><img src="img/actionIcons/actTextureResolution.svg" alt="logo"></td>
+<td style="text-align:center">actTextureResolution</td>
+<td style="text-align:center">Choose texture quality</td>
+<td style="text-align:center">Off</td>
+<td style="text-align:center">Radialmenu =&gt; Menu Shading</td>
+<td style="text-align:center">Only available when part has textures (e.g. albedo map, normal map) defined.</td>
+</tr>
+</tbody>
+</table>
+</article></section></section>
+  </body>
+

@@ -1,0 +1,20 @@
+<svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 96 96">
+  <defs>
+    <style>
+      .solid-light {
+        fill: #d4d7d8;
+      }
+
+      .solid-red {
+        fill: #ed1c24;
+      }
+    </style>
+  </defs>
+  <g id="actCenterposition">
+    <path class="solid-light" d="M13.36,13a5,5,0,0,0-5,5V40.54c0,2.37,2.82,3.91,4.86,3.91H31V86a5,5,0,0,0,5,5H61.25a5,5,0,0,0,5-5V44.45H83.41a4.07,4.07,0,0,0,4.22-4V18a5,5,0,0,0-5-5Z"/>
+    <g>
+      <path class="solid-red" d="M61.5,50.5H55.35a7.54,7.54,0,0,0-5.85-5.85V38.5h-3v6.15a7.54,7.54,0,0,0-5.85,5.85H34.5v3h6.15a7.54,7.54,0,0,0,5.85,5.85V65.5h3V59.35a7.54,7.54,0,0,0,5.85-5.85H61.5ZM48,56.5A4.5,4.5,0,1,1,52.5,52,4.51,4.51,0,0,1,48,56.5Z"/>
+      <circle class="solid-red" cx="48" cy="52" r="1.5"/>
+    </g>
+  </g>
+</svg>

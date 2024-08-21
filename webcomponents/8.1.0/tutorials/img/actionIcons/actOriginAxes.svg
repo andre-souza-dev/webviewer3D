@@ -1,0 +1,30 @@
+<svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 96 96">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        opacity: 0;
+      }
+
+      .solid-medium {
+        fill: #acafb2;
+      }
+
+      .solid-dark {
+        fill: #5b6166;
+      }
+    </style>
+  </defs>
+  <g id="actOriginAxes">
+    <g id="actOriginAxes-2" data-name="actOriginAxes">
+      <circle class="cls-1" cx="48.04" cy="48.07" r="47.93"/>
+      <rect class="solid-medium" x="45.7" y="15.53" width="4.67" height="23.03"/>
+      <path class="solid-medium" d="M46.52,1,41.66,15.53H54.42L49.56,1C49.2-.14,46.88-.14,46.52,1Z"/>
+      <rect class="solid-medium" x="18.32" y="56.1" width="23.03" height="4.67" transform="translate(-25.22 22.75) rotate(-30)"/>
+      <path class="solid-medium" d="M8,72.8l15.06-3.08-6.38-11L6.47,70.17C5.71,71,6.87,73,8,72.8Z"/>
+      <rect class="solid-medium" x="63.78" y="46.99" width="4.67" height="23.03" transform="translate(-17.61 86.52) rotate(-60)"/>
+      <path class="solid-medium" d="M89.48,70.25,79.28,58.74,72.9,69.79,88,72.88C89.08,73.1,90.24,71.1,89.48,70.25Z"/>
+      <circle class="solid-dark" cx="48" cy="48" r="5.19"/>
+    </g>
+  </g>
+</svg>

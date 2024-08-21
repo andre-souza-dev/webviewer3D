@@ -1,0 +1,89 @@
+/*csslint universal-selector: false*/
+
+/*region Thirdparty*/
+
+/*Ion.RangeSlider BEGIN*/
+.irs-slider {
+    background: #ff5000;
+}
+
+/*Ion.RangeSlider END*/
+
+/*endregion*/
+
+/*region Components*/
+
+/* psol.components.ViewBase BEGIN */
+.ComponentCustomizeViewBaseButtonColor {
+    background-color: #ff5000;
+    border-radius: 3px;
+}
+
+.ComponentCustomizeViewBaseButtonColor:hover {
+    background-color: #ff5000;
+    opacity: 0.8;
+}
+
+/* psol.components.View END */
+
+/* psol.components.DialogBase BEGIN */
+.ComponentCustomizeTableVarEdit * {
+    font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 0.875rem;
+    color: #5a5f62;
+}
+
+.ComponentCustomizeTableVarEdit .ComponentCustomizeViewBaseButtonColor,
+.ComponentCustomizeTableVarEdit .ComponentCustomizeViewBaseButtonColor:hover {
+    color: white;
+}
+
+.ComponentCustomizeDialogBaseDialogHeaderColor * {
+    color: #ff5000;
+    font-family: "Titillium Web", Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1.125rem;
+}
+
+/* psol.components.DialogBase END */
+
+/* psol.components.Table BEGIN*/
+.ComponentCustomizeTable table .ComponentCustomizeTableColumnHeaderColor {
+    background-color: #ff5000;
+}
+
+.ComponentCustomizeTable table th.ComponentCustomizeTableCurrentRowHeaderColor[data-current=true] {
+    background-color: #ff5000;
+}
+
+.ComponentCustomizeTable table .ComponentCustomizeTableCurrentRowHeaderColor[data-current=true] ~ td {
+    background-color: #e2e3e4;
+}
+
+.ComponentCustomizeTable table .ComponentCustomizeTableCurrentRowHeaderColor {
+    background-color: #999ea1;
+    color: white;
+}
+
+.ComponentCustomizeTable * {
+    font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 0.875rem;
+}
+
+.ComponentCustomizeTable table .ComponentCustomizeTableColumnHeaderTextColor,
+.ComponentCustomizeTable table .ComponentCustomizeTableCurrentRowHeaderColor {
+    font-family: "Titillium Web", Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+}
+
+.ComponentCustomizeTable table .ComponentCustomizeTableColumnHeaderDescTextColor {
+    opacity: 0.75;
+}
+
+.ComponentCustomizeTable table .ComponentCustomizeTableCurrentRowHeaderColor .psol-comp-table-collapse {
+    transform: scale(0.66);
+    margin-top: -2px;
+}
+
+/* psol.components.Table END*/
+
+/*endregion*/

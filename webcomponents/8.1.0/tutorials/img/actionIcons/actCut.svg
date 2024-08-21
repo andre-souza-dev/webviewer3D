@@ -1,0 +1,47 @@
+<svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="96" height="96" viewBox="0 0 96 96">
+  <defs>
+    <style>
+      .border-thick, .gradient-left-to-right_border-thick, .gradient-right-to-left_border-thick {
+        stroke: #5b6166;
+      }
+
+      .gradient-left-to-right_border-thick {
+        stroke-miterlimit: 10;
+        stroke-width: 3px;
+        fill: url(#left-to-right);
+      }
+
+      .gradient-right-to-left_border-thick {
+        stroke-linecap: square;
+        fill: url(#right-to-left);
+      }
+
+      .border-thick, .gradient-right-to-left_border-thick {
+        stroke-linejoin: round;
+        stroke-width: 3px;
+      }
+
+      .border-thick {
+        fill: none;
+      }
+
+      .solid-dark {
+        fill: #5b6166;
+      }
+    </style>
+    <linearGradient id="left-to-right" x1="7.49" y1="-16884.84" x2="88.85" y2="-16884.84" gradientTransform="matrix(1, 0, 0, -1, 0, -16862)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#e2e3e4"/>
+      <stop offset="1" stop-color="#8d9091"/>
+    </linearGradient>
+    <linearGradient id="right-to-left" x1="63.5" y1="-16918.54" x2="89.5" y2="-16918.54" gradientTransform="matrix(1, 0, 0, -1, 0, -16862)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#8d9091"/>
+      <stop offset="1" stop-color="#e2e3e4"/>
+    </linearGradient>
+  </defs>
+  <g id="actCut">
+    <path class="gradient-left-to-right_border-thick" d="M7.49,13.87,64.33,40.75c3.86-1.5,44.51-15.84,12-30.92C58.26,1.45,26.14,4.51,7.49,13.87Z"/>
+    <path class="gradient-right-to-left_border-thick" d="M63.5,40.75V91.06s26-5.46,26-16.82V22C89.5,31.55,71.5,37.69,63.5,40.75Z"/>
+    <path class="border-thick" d="M6.5,13.87l57,26.88V91.06L6.5,67.41Z"/>
+    <path class="solid-dark" d="M7,63.29V56l29.27-27.4L41.48,31Zm43.86-28-5.21-2.43L8.58,67.55,14,69.78ZM32.34,26.75l-5.2-2.43L7,43.17v7.31ZM7,30.35v7.31L23.21,22.49,18,20.05Zm53,9.2-5.21-2.43L18.1,71.46l5.42,2.23ZM63,75V67.64L46.39,83.19l5.43,2.23Zm0-25.63V42L27.36,75.37l5.43,2.23ZM55.91,87.1,63,90V80.46ZM14.08,18.22,7,14.91v9.94ZM63,62.14V54.83L36.88,79.28l5.42,2.23Z"/>
+  </g>
+</svg>

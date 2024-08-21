@@ -1,0 +1,24 @@
+<svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 96 96">
+  <defs>
+    <style>
+      .solid-dark {
+        fill: #5b6166;
+      }
+
+      .solid-light_border-thick {
+        fill: #d4d7d8;
+        stroke: #5b6166;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 3px;
+      }
+    </style>
+  </defs>
+  <g id="actDreamocHD3">
+    <polygon class="solid-dark" points="40.99 31.08 29 38.75 60.16 39.53 70.2 30.4 40.99 31.08"/>
+    <path class="solid-dark" d="M69.33,69H14L25.22,38.37,44,29H71.49L82,57.76ZM17.66,66h50L58.86,40H27.28ZM61.23,39.28l8.69,25.63,9-7.94L70.23,33.18ZM32.41,38H59l8.52-6H44.48Zm38.23-6.79-1.49,1,1.5-1Z"/>
+    <polygon class="solid-light_border-thick" points="44.67 53.23 52.56 49.06 52.54 57.37 44.65 61.54 44.67 53.23"/>
+    <polygon class="solid-light_border-thick" points="36.73 49.06 44.62 44.89 52.56 49.06 44.67 53.23 36.73 49.06"/>
+    <polygon class="solid-light_border-thick" points="44.67 53.23 44.65 61.54 36.7 57.36 36.73 49.06 44.67 53.23"/>
+  </g>
+</svg>

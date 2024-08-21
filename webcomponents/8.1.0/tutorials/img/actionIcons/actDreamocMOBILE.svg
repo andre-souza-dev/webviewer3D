@@ -1,0 +1,59 @@
+<svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="96" height="96" viewBox="0 0 96 96">
+  <defs>
+    <style>
+      .solid-white {
+        fill: #fff;
+      }
+
+      .solid-dark {
+        fill: #5b6166;
+      }
+
+      .solid-medium {
+        fill: #acafb2;
+      }
+
+      .border-thin--transparent, .gradient-left-to-right_border-thin--transparent, .gradient-right-to-left_border-thin--transparent {
+        stroke: #5b6166;
+        opacity: 0.5;
+      }
+
+      .gradient-left-to-right_border-thin--transparent {
+        stroke-miterlimit: 10;
+        fill: url(#left-to-right);
+      }
+
+      .gradient-right-to-left_border-thin--transparent {
+        stroke-linecap: square;
+        fill: url(#right-to-left);
+      }
+
+      .border-thin--transparent, .gradient-right-to-left_border-thin--transparent {
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+
+      .border-thin--transparent {
+        fill: none;
+      }
+    </style>
+    <linearGradient id="left-to-right" x1="50.59" y1="37.38" x2="83.27" y2="37.38" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#e2e3e4"/>
+      <stop offset="1" stop-color="#8d9091"/>
+    </linearGradient>
+    <linearGradient id="right-to-left" x1="11.23" y1="36.25" x2="56.8" y2="36.25" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#8d9091"/>
+      <stop offset="1" stop-color="#e2e3e4"/>
+    </linearGradient>
+  </defs>
+  <g id="actDreamocMOBILE">
+    <polygon class="solid-white" points="12.88 53.25 47.76 46.24 80.11 65.38 42.85 73.66 12.88 53.25"/>
+    <polygon class="solid-dark" points="43.04 77.49 43.34 82.96 6.88 57.23 6.51 52.24 43.04 77.49"/>
+    <path class="solid-medium" d="M6.51,52.24l42.74-8.66L89.32,67.17,43,77.49ZM80.71,65.3l-33-19.67L12.29,52.85,42.84,73.66,80.71,65.3"/>
+    <polygon class="solid-dark" points="89.32 67.17 89.48 72.5 43.34 82.96 43.04 77.49 89.32 67.17"/>
+    <polygon class="gradient-left-to-right_border-thin--transparent" points="83.27 30.38 58.2 61.72 50.59 55.97 56.8 13.04 83.27 30.38"/>
+    <polygon class="gradient-right-to-left_border-thin--transparent" points="36.92 59.46 11.23 22.98 56.8 13.04 50.59 55.97 36.92 59.46"/>
+    <polygon class="border-thin--transparent" points="11.23 22.98 36.92 59.46 44.84 64.8 37.44 41.68 11.23 22.98"/>
+    <polyline class="border-thin--transparent" points="44.84 64.8 58.2 61.72 83.27 30.38 37.44 41.68"/>
+  </g>
+</svg>

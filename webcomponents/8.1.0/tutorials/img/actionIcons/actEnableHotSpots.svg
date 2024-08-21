@@ -1,0 +1,44 @@
+<svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 96 96">
+  <defs>
+    <style>
+      .border-thick, .border-thin {
+        fill: none;
+      }
+
+      .border-thick, .border-thin, .solid-light_border-thick {
+        stroke: #5b6166;
+        stroke-linejoin: round;
+      }
+
+      .border-thick, .solid-light_border-thick {
+        stroke-width: 3px;
+      }
+
+      .solid-dark {
+        fill: #5b6166;
+      }
+
+      .border-thin {
+        stroke-width: 1.5px;
+      }
+
+      .solid-light_border-thick {
+        fill: #d4d7d8;
+        stroke-linecap: round;
+      }
+    </style>
+  </defs>
+  <g id="actEnableHotSpots">
+    <polygon class="border-thick" points="32.08 60.63 56.45 46.59 56.45 74.1 31.96 88.18 32.08 60.63"/>
+    <polygon class="border-thick" points="7.55 46.59 31.92 32.56 56.45 46.59 32.08 60.63 7.55 46.59"/>
+    <polygon class="border-thick" points="32.08 60.63 31.96 88.18 7.51 74.97 7.59 46.59 32.08 60.63"/>
+    <circle class="solid-dark" cx="32" cy="47" r="2"/>
+    <circle class="border-thin" cx="32" cy="47" r="4"/>
+    <line class="border-thin" x1="32.82" y1="46.25" x2="55.6" y2="23.47"/>
+    <rect class="solid-light_border-thick" x="39.5" y="8.5" width="53" height="20"/>
+    <circle class="solid-dark" cx="44" cy="67" r="2"/>
+    <circle class="border-thin" cx="44" cy="67" r="4"/>
+    <line class="border-thin" x1="44" y1="67" x2="64" y2="67"/>
+    <rect class="solid-light_border-thick" x="62.5" y="50.5" width="29" height="31"/>
+  </g>
+</svg>

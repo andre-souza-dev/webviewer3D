@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Compare 3D Demo</title>
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1, minimum-scale=no" />
+    <!--meta name="viewport" content="width=device-width, initial-scale=1"-->
+
+    <!-- Allow web app to be run in full-screen mode. -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <!-- Configure the status bar. -->
+    <!--meta name="apple-mobile-web-app-status-bar-style" content="black"-->
+
+    <!-- Android theme color for chrome 39+ -->
+    <meta name="theme-color" content="#9ab6ca" />
+
+    <!-- favicon/appicon-->
+    <link rel="icon" type="image/png" sizes="192x192" href="./img/favicon/icon-192x192.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/icon-180x180.png" />
+    <link rel="SHORTCUT ICON" href="./img/favicon/favicon.ico" />
+
+    <!-- webcomponents styles -->
+    <link rel="stylesheet" href="/webcomponents/8.1.0/api/css/thirdparty.min.css?v=1680698656087">
+    <link rel="stylesheet" href="/webcomponents/8.1.0/api/css/psol.components.min.css?v=1680698656087">
+
+    <!-- webapp styles -->
+    <link rel="stylesheet" href="/webcomponents-examples/8.1.0/compare3ddemo/css/compare3ddemo.min.css?v=1680698656087">
+
+    <!-- thirdparty scripts -->
+    <script src="/webcomponents-examples/8.1.0/compare3ddemo/thirdparty/jquery.min.js?v=1680698656087"></script>
+
+    <!-- webcomponents scripts -->
+    <script src="/webcomponents/8.1.0/api/js/fabric.min.js?v=1680698656087"></script>
+    <script src="/webcomponents/8.1.0/api/js/quill.min.js?v=1680698656087"></script>
+    <script src="/webcomponents/8.1.0/api/js/thirdparty.min.js?v=1680698656087"></script>
+    <script src="/webcomponents/8.1.0/api/js/psol.components.min.js?v=1680698656087"></script>
+
+    <!-- webapp scripts -->
+    <script src="/webcomponents-examples/8.1.0/compare3ddemo/js/compare3ddemo.js?v=1680698656087"></script>
+
+</head>
+
+<body>
+    <div class="pageBody">
+        <div class="controlcontainer">
+            <select class="compareselect">
+                <option value="prj_prj">Project vs. Project</option>
+                <option value="file_prj">File vs. Project</option>
+                <option value="file_file">File vs. File</option>
+            </select>
+            <div class="input_container">
+                <div class="compareoption prj_prj">
+                    <input type="text" id="project1" value="a4hydrauliek/befestigungsaugen/clevis_eye_g2.prj" />
+                    <input type="text" id="project2" value="a4hydrauliek/befestigungsaugen/clevis_eye_g6.prj" />
+                    <button class="comparebutton compare_prj_prj">Compare</button>
+                </div>
+                <div class="compareoption file_prj">
+                    <input type="file" name="file" id="file" class="inputfile" accept=".stl,.stp,.dae,.zjv,.pjv,.zip,.fbx,.gltf,.glb,.ply,.obj" multiple />
+                    <label for="file">
+                        <span>Choose a (STL|STEP|Collada|ZJV|PJV|ZIP|FBX|GLTF|GLB|PLY|OBJ) file</span>
+                    </label>
+                    <input type="text" id="project" value="a4hydrauliek/befestigungsaugen/clevis_eye_g2.prj" />
+                    <button class="comparebutton compare_file_prj">Compare</button>
+                </div>
+                <div class="compareoption file_file">
+                    <input type="file" name="file1" id="file1" class="inputfile" accept=".stl,.stp,.dae,.zjv,.pjv,.zip,.fbx,.gltf,.glb,.ply,.obj" multiple />
+                    <label for="file1">
+                        <span>Choose 1st (STL|STEP|Collada|ZJV|PJV|ZIP|FBX|GLTF|GLB|PLY|OBJ) file</span>
+                    </label>
+                    <input type="file" name="file2" id="file2" class="inputfile" accept=".stl,.stp,.dae,.zjv,.pjv,.zip,.fbx,.gltf,.glb,.ply,.obj" multiple />
+                    <label for="file2">
+                        <span>Choose 2nd (STL|STEP|Collada|ZJV|PJV|ZIP|FBX|GLTF|GLB|PLY|OBJ) file</span>
+                    </label>
+                    <button class="comparebutton compare_file_file">Compare</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 
+            create an additional container, because chrome has a wired behaviour when
+            subcontainer is no longer flexbox
+        -->
+        <div class="compareviewercontainer">
+            <div class="compareviewer"></div>
+        </div>
+    </div>
+</body>
+
+</html>

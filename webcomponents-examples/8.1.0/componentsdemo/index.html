@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>PSOL JS GUI Components Demo</title>
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1, minimum-scale=1" />
+    <!--meta name="viewport" content="width=device-width, initial-scale=1"-->
+
+    <!-- Allow web app to be run in full-screen mode. -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <!-- Configure the status bar. -->
+    <!--meta name="apple-mobile-web-app-status-bar-style" content="black"-->
+
+    <!-- Android theme color for chrome 39+ -->
+    <meta name="theme-color" content="#9ab6ca" />
+
+    <!-- favicon/appicon-->
+    <link rel="icon" type="image/png" sizes="192x192" href="./img/favicon/icon-192x192.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/icon-180x180.png" />
+    <link rel="SHORTCUT ICON" href="./img/favicon/favicon.ico" />
+
+    <!-- webcomponents styles -->
+    <link rel="stylesheet" href="/webcomponents/8.1.0/api/css/thirdparty.min.css?v=1680698656089">
+    <link rel="stylesheet" href="/webcomponents/8.1.0/api/css/psol.components.min.css?v=1680698656089">
+
+    <!-- webapp styles -->
+    <link rel="stylesheet" href="/webcomponents-examples/8.1.0/componentsdemo/css/componentsdemo.min.css?v=1680698656089">
+
+    <!-- customized styles -->
+    <!--link rel="stylesheet" type="text/css" href="customize_ibo.css" /-->
+    <!--link rel="stylesheet" type="text/css" href="customize_partcloud.css"/-->
+    <!--link rel="stylesheet" type="text/css" href="customize_bimcatalogs.css"/-->
+    <!--link rel="stylesheet" type="text/css" href="customize_pcom.css"/-->
+
+    <!-- thirdparty scripts -->
+    <script src="/webcomponents-examples/8.1.0/componentsdemo/thirdparty/jquery.min.js?v=1680698656089"></script>
+
+    <!-- webcomponents scripts -->
+    <script src="/webcomponents/8.1.0/api/js/fabric.min.js?v=1680698656089"></script>
+    <script src="/webcomponents/8.1.0/api/js/quill.min.js?v=1680698656089"></script>
+    <script src="/webcomponents/8.1.0/api/js/thirdparty.min.js?v=1680698656089"></script>
+    <script src="/webcomponents/8.1.0/api/js/psol.components.min.js?v=1680698656089"></script>
+
+    <!-- webapp scripts -->
+    <script src="/webcomponents-examples/8.1.0/componentsdemo/js/componentsdemo.js?v=1680698656089"></script>
+</head>
+
+<body>
+    <div class="pageBody">
+        <div class="header">
+            <div class="backButton"></div>
+            <div class="title">Title</div>
+
+            <div class="orderButton">Order</div>
+
+        </div>
+        <div class="pages">
+            <div class="indexPage">
+                <!--input class="filterInput" type="text" name="filter" placeholder="Filter..." autocomplete="off"-->
+                <div class="searchIputContainer"></div>
+                <div class="countryDeliveryContainer"></div>
+                <div class="indexComponentContainer"></div>
+            </div>
+            <div class="projectPage">
+                <div class="tabCtrl projectTabCtrl">
+                    <ul class="tabCtrlMenu">
+                        <li class="" data-name="table">Page 1</li>
+                        <li class="active" data-name="viewer">Page 2</li>
+                    </ul>
+                    <div class="tabCtrlContent">
+                        <div class="tabCtrlPage active" data-name="table">
+                            <div class="tableComponentContainer"></div>
+                        </div>
+                        <div class="tabCtrlPage" data-name="viewer">
+                            <div class="viewerComponentContainer">
+                                <div class="View3D"></div>
+                                <div class="View2D"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="assistantPage">
+                <div class="ViewAssistant"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

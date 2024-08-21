@@ -1,0 +1,52 @@
+<svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="96" height="96" viewBox="0 0 96 96">
+  <defs>
+    <style>
+      .border-thick, .gradient-left-to-right_border-thick, .gradient-right-to-left_border-thick {
+        stroke: #5b6166;
+      }
+
+      .gradient-right-to-left_border-thick {
+        stroke-linecap: square;
+        fill: url(#right-to-left);
+      }
+
+      .border-thick, .gradient-right-to-left_border-thick {
+        stroke-linejoin: round;
+        stroke-width: 3px;
+      }
+
+      .gradient-left-to-right_border-thick {
+        stroke-miterlimit: 10;
+        stroke-width: 3px;
+        fill: url(#left-to-right);
+      }
+
+      .border-thick {
+        fill: none;
+      }
+
+      .solid-dark {
+        fill: #5b6166;
+      }
+    </style>
+    <linearGradient id="right-to-left" x1="5.5" y1="66.25" x2="90.5" y2="66.25" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#8d9091"/>
+      <stop offset="1" stop-color="#e2e3e4"/>
+    </linearGradient>
+    <linearGradient id="left-to-right" x1="5.5" y1="-16903.14" x2="90.5" y2="-16903.14" gradientTransform="matrix(1, 0, 0, -1, 0, -16862)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#e2e3e4"/>
+      <stop offset="1" stop-color="#8d9091"/>
+    </linearGradient>
+  </defs>
+  <g id="actCustomDimensions">
+    <g>
+      <path class="gradient-right-to-left_border-thick" d="M90.5,41.5H5.5V74.64c0,9,20,16.36,43.72,16.36S90.5,83.68,90.5,74.64c0,0,0-.09,0-.14h0Z"/>
+      <path class="gradient-left-to-right_border-thick" d="M90.5,41.14c0,9-17.53,16.31-41.28,16.31S5.5,50.15,5.5,41.14s20-16.31,43.72-16.31S90.5,32.14,90.5,41.14Z"/>
+      <line class="border-thick" x1="5.5" y1="48.75" x2="5.5" y2="7.04"/>
+      <line class="border-thick" x1="90.5" y1="49" x2="90.5" y2="7"/>
+      <line class="border-thick" x1="8" y1="14.5" x2="92" y2="14.5"/>
+      <polygon class="solid-dark" points="20 23.71 5.66 14.75 20 5.78 20 23.71"/>
+      <polygon class="solid-dark" points="76 5.78 90.34 14.75 76 23.71 76 5.78"/>
+    </g>
+  </g>
+</svg>

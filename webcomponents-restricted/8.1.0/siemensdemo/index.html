@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Siemens demo</title>
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1, minimum-scale=1" />
+    <!--meta name="viewport" content="width=device-width, initial-scale=1"-->
+
+    <!-- Allow web app to be run in full-screen mode. -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <!-- Configure the status bar. -->
+    <!--meta name="apple-mobile-web-app-status-bar-style" content="black"-->
+
+    <!-- Android theme color for chrome 39+ -->
+    <meta name="theme-color" content="#9ab6ca" />
+
+    <!-- favicon/appicon-->
+
+    <!-- webcomponents styles -->
+    <link rel="stylesheet" href="/webcomponents/8.1.0/api/css/thirdparty.min.css?v=1711463967131">
+    <link rel="stylesheet" href="/webcomponents/8.1.0/api/css/psol.components.min.css?v=1711463967131">
+
+    <!-- webapp styles -->
+    <link rel="stylesheet" href="/webcomponents-restricted/8.1.0/siemensdemo/css/siemensdemo.min.css?v=1711463967131">
+
+    <!-- thirdparty scripts -->
+    <script src="/webcomponents-restricted/8.1.0/siemensdemo/thirdparty/jquery.min.js?v=1711463967131"></script>
+
+    <!-- webcomponents scripts -->
+    <script src="/webcomponents/8.1.0/api/js/fabric.min.js?v=1711463967131"></script>
+    <script src="/webcomponents/8.1.0/api/js/quill.min.js?v=1711463967131"></script>
+    <script src="/webcomponents/8.1.0/api/js/thirdparty.min.js?v=1711463967131"></script>
+    <script src="/webcomponents/8.1.0/api/js/psol.components.min.js?v=1711463967131"></script>
+
+    <!-- webapp scripts -->
+    <script src="/webcomponents-restricted/8.1.0/siemensdemo/js/siemensdemo.js?v=1711463967131"></script>
+
+    <script>
+        jQuery.noConflict();
+
+    </script>
+</head>
+
+<body>
+    <div id="container">
+        <div id="cnsSearch">
+            Order number: <input id="txtOrderNumber" type="text" value="3SU11300AB201CA0" />
+            <div id="cnsDownload">
+                <input id="btnDownload" type="button" value="Download" disabled/>
+            </div>
+        </div>
+        <div id="cnsWebViewerContainer">
+            <div id="cnsWebViewer"></div>
+        </div>
+    </div>
+</body>
+
+</html>

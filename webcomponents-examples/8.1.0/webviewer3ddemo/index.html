@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>CADENAS WebGL WebViewer Demo</title>
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+
+    <!-- webcomponents styles -->
+    <link rel="stylesheet" href="/webcomponents/8.1.0/api/css/thirdparty.min.css?v=1680698656162">
+    <link rel="stylesheet" href="/webcomponents/8.1.0/api/css/psol.components.min.css?v=1680698656162">
+
+    <!-- webapp styles -->
+    <link rel="stylesheet" href="/webcomponents-examples/8.1.0/webviewer3ddemo/css/webviewer3ddemo.min.css?v=1680698656162">
+
+    <!-- thirdparty scripts -->
+    <script src="/webcomponents-examples/8.1.0/webviewer3ddemo/thirdparty/jquery.min.js?v=1680698656162"></script>
+
+    <!-- webcomponents scripts -->
+    <script src="/webcomponents/8.1.0/api/js/fabric.min.js?v=1680698656162"></script>
+    <script src="/webcomponents/8.1.0/api/js/quill.min.js?v=1680698656162"></script>
+    <script src="/webcomponents/8.1.0/api/js/thirdparty.min.js?v=1680698656162"></script>
+    <script src="/webcomponents/8.1.0/api/js/psol.components.min.js?v=1680698656162"></script>
+
+    <!-- webapp scripts -->
+    <script src="/webcomponents-examples/8.1.0/webviewer3ddemo/js/webviewer3ddemo.js?v=1680698656162"></script>
+
+
+</head>
+
+<body>
+    <div id="container">
+        <div id="contolContainer">
+            <div class="fileContainer">
+                <div>File(s)&nbsp;</div>
+                <input type="file" name="file1" id="file1" class="inputfile" multiple />
+            </div>
+            <div class="folderContainer">
+                <div>Folder&nbsp;</div>
+                <input type="file" name="file2" id="file2" class="inputfile2" webkitdirectory />
+            </div>
+        </div>
+        <div id="cnsWebViewerContainer">
+            <div id="cnsWebViewer"></div>
+        </div>
+    </div>
+</body>
+
+</html>

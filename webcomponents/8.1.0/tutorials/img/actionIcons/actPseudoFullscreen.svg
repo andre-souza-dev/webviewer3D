@@ -1,0 +1,12 @@
+<svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 96 96">
+  <defs>
+    <style>
+      .solid-dark {
+        fill: #5b6166;
+      }
+    </style>
+  </defs>
+  <g id="actPseudoFullscreen">
+    <path class="solid-dark" d="M77,28V67H19V28H77m6-6H13V73H83V22ZM7,16H19V10H1V28H7ZM19,79H7V67H1V85H19ZM95,67H89V79H77v6H95Zm0-57H77v6H89V28h6Z"/>
+  </g>
+</svg>

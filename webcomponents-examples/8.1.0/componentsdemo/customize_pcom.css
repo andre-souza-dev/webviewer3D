@@ -1,0 +1,52 @@
+/* Thirdparty BEGIN */
+
+/* Ion.RangeSlider BEGIN*/
+.irs-slider {
+  background: #85cee4;
+}
+/* Ion.RangeSlider END*/
+
+/* Thirdparty END */
+
+
+/* Components BEGIN */
+
+/* psol.components.ViewBase BEGIN */
+.ComponentCustomizeViewBaseButtonColor {
+  background-color: #85cee4;
+}
+.ComponentCustomizeViewBaseIconButtonSize {
+  background-size: 22px;
+  width: 24px;
+  height: 24px;
+}
+/* psol.components.View END */
+
+/* psol.components.DialogBase BEGIN */
+.ComponentCustomizeDialogBaseDialogHeaderColor {
+  color: #85cee4;
+}
+/* psol.components.DialogBase END */
+
+/* psol.components.Table BEGIN*/
+.ComponentCustomizeTableColumnHeaderColor {
+  background-color: #85cee4;
+}
+th.ComponentCustomizeTableCurrentRowHeaderColor[data-current=true] {
+  background-color: #85cee4;
+}
+.ComponentCustomizeTableColumnHeaderTextColor {
+  color: #ffffff;
+}
+.ComponentCustomizeTableColumnHeaderDescTextColor {
+  color: #000000;
+}
+.ComponentCustomizeTableCurrentRowDescColor {
+  color: #000000;
+}
+th.ComponentCustomizeTableCurrentRowHeaderColor[data-current=true] .ComponentCustomizeTableCurrentRowDescColor {
+  color: #ffffff;
+}
+/* psol.components.Table END*/
+
+/* Components END */

@@ -1,0 +1,68 @@
+<svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="96" height="96" viewBox="0 0 96 96">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#Unbenannter_Verlauf_21);
+      }
+
+      .cls-2 {
+        mask: url(#mask);
+      }
+
+      .border-thick--dashed {
+        fill: none;
+        stroke-dasharray: 6;
+      }
+
+      .border-thick--dashed, .gradient-left-to-right_border-thick, .gradient-right-to-left_border-thick {
+        stroke: #5b6166;
+      }
+
+      .border-thick--dashed, .gradient-left-to-right_border-thick {
+        stroke-miterlimit: 10;
+      }
+
+      .border-thick--dashed, .gradient-right-to-left_border-thick {
+        stroke-width: 3px;
+      }
+
+      .gradient-right-to-left_border-thick {
+        stroke-linecap: square;
+        stroke-linejoin: round;
+        fill: url(#right-to-left);
+      }
+
+      .gradient-left-to-right_border-thick {
+        stroke-width: 3px;
+        fill: url(#left-to-right);
+      }
+    </style>
+    <linearGradient id="Unbenannter_Verlauf_21" data-name="Unbenannter Verlauf 21" x1="2" y1="49.5" x2="94" y2="49.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0.35" stop-color="#fff"/>
+      <stop offset="0.65" stop-color="#888"/>
+      <stop offset="1" stop-color="#444"/>
+    </linearGradient>
+    <mask id="mask" x="2" y="5" width="92" height="89" maskUnits="userSpaceOnUse">
+      <rect class="cls-1" x="2" y="5" width="92" height="89"/>
+    </mask>
+    <linearGradient id="right-to-left" x1="5.5" y1="57.25" x2="90.5" y2="57.25" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#8d9091"/>
+      <stop offset="1" stop-color="#e2e3e4"/>
+    </linearGradient>
+    <linearGradient id="left-to-right" x1="5.5" y1="-17463.14" x2="90.5" y2="-17463.14" gradientTransform="matrix(1, 0, 0, -1, 0, -17438)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#e2e3e4"/>
+      <stop offset="1" stop-color="#8d9091"/>
+    </linearGradient>
+  </defs>
+  <g id="actTransparency">
+    <g class="cls-2">
+      <path class="border-thick--dashed" d="M90.5,75c0-9-20-16.36-43.72-16.36S5.5,66,5.5,75"/>
+    </g>
+    <g class="cls-2">
+      <g>
+        <path class="gradient-right-to-left_border-thick" d="M90.5,25.5H5.5V72.64c0,9,20,16.36,43.72,16.36S90.5,81.68,90.5,72.64c0,0,0-.09,0-.14h0Z"/>
+        <path class="gradient-left-to-right_border-thick" d="M90.5,25.14c0,9-17.53,16.31-41.28,16.31S5.5,34.15,5.5,25.14s20-16.31,43.72-16.31S90.5,16.14,90.5,25.14Z"/>
+      </g>
+    </g>
+  </g>
+</svg>

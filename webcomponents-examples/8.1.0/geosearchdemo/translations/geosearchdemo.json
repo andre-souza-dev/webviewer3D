@@ -1,0 +1,113 @@
+{
+  "chinese": {
+    "Bauteile werden gesucht...": "在搜索零部件...",
+    "Bitte warten...": "请稍侯...",
+    "ERP Login...": "登录ERP中...",
+    "Fehler(%1): %2": "错误(%1): %2",
+    "Server Fehler": "服务器出错",
+    "Suchergebnis": "搜索结果",
+    "Suchergebnisse": "搜索结果",
+    "Tabelle": "开放式列表",
+    "Vorschau": "预览"
+  },
+  "chinese_traditional": {
+    "Bauteile werden gesucht...": "在搜索零部件...",
+    "Bitte warten...": "請稍侯...",
+    "ERP Login...": "ERP登錄...",
+    "Fehler(%1): %2": "錯誤(%1): %2",
+    "Server Fehler": "服務器錯誤",
+    "Suchergebnis": "搜索结果",
+    "Suchergebnisse": "搜索結果",
+    "Tabelle": "開放式列表",
+    "Vorschau": "預覽"
+  },
+  "english": {
+    "Bauteile werden gesucht...": "Searching components...",
+    "Bitte warten...": "Please wait...",
+    "Fehler(%1): %2": "Error(%1): %2",
+    "Server Fehler": "Server error",
+    "Suchergebnis": "Search result",
+    "Suchergebnisse": "Search results",
+    "Tabelle": "Table",
+    "Vorschau": "Preview"
+  },
+  "french": {
+    "Bauteile werden gesucht...": "Cherche composants...",
+    "Bitte warten...": "Veuillez patienter...",
+    "ERP Login...": "Identification ERP ....",
+    "Fehler(%1): %2": "Erreur (%1) : %2",
+    "Server Fehler": "Erreur du serveur",
+    "Suchergebnis": "Réultat de la recherche",
+    "Suchergebnisse": "Résultats de recherche",
+    "Tabelle": "Tableau",
+    "Vorschau": "Aperçu"
+  },
+  "german": {
+    "ERP Login...": "ERP-Login..."
+  },
+  "italian": {
+    "Bauteile werden gesucht...": "Ricerca dei componenti in corso...",
+    "Bitte warten...": "Attendere prego...",
+    "ERP Login...": "Login ERP...",
+    "Fehler(%1): %2": "Errore(%1): %2",
+    "Server Fehler": "Errore del server",
+    "Suchergebnis": "Risultato della ricerca",
+    "Suchergebnisse": "Risultati ricerca",
+    "Tabelle": "Tabella",
+    "Vorschau": "Anteprima"
+  },
+  "japanese": {
+    "Bauteile werden gesucht...": "コンポーネントを探しています...",
+    "Bitte warten...": "しばらくお待ちください...",
+    "ERP Login...": "ERPログイン...",
+    "Fehler(%1): %2": "エラー(%1): %2",
+    "Server Fehler": "サーバーエラー",
+    "Suchergebnis": "検索結果",
+    "Suchergebnisse": "検索結果",
+    "Tabelle": "テーブル",
+    "Vorschau": "プレビュー"
+  },
+  "korean": {
+    "Bauteile werden gesucht...": "구성 요소를 찾고 있습니다...",
+    "Bitte warten...": "기다려 주십시오",
+    "ERP Login...": "ERP 로그인...",
+    "Fehler(%1): %2": "오류(%1): %2",
+    "Server Fehler": "서버오류",
+    "Suchergebnis": "결과검색",
+    "Suchergebnisse": "결과 검색",
+    "Tabelle": "테이블",
+    "Vorschau": "미리보기"
+  },
+  "russian": {
+    "Bauteile werden gesucht...": "Поиск деталей...",
+    "Bitte warten...": "Пожалуйста, подождите...",
+    "ERP Login...": "ERP-логин...",
+    "Fehler(%1): %2": "Ошибка(%1): %2",
+    "Server Fehler": "Ошибка сервера",
+    "Suchergebnis": "Результат поиска",
+    "Suchergebnisse": "Результаты поиска",
+    "Tabelle": "Таблица",
+    "Vorschau": "Просмотр"
+  },
+  "spanish": {
+    "Bauteile werden gesucht...": "Buscando piezas...",
+    "Bitte warten...": "Espere por favor...",
+    "ERP Login...": "Inició de sesión ERP",
+    "Fehler(%1): %2": "Error(%1): %2",
+    "Server Fehler": "Error del servidor",
+    "Suchergebnis": "Resultados de búsqueda",
+    "Suchergebnisse": "Resultados de búsqueda",
+    "Tabelle": "Tabla",
+    "Vorschau": "Previsualización"
+  },
+  "turkish": {
+    "Bauteile werden gesucht...": "Searching components...",
+    "Bitte warten...": "Lütfen bekleyin...",
+    "Fehler(%1): %2": "Error(%1): %2",
+    "Server Fehler": "Server error",
+    "Suchergebnis": "Search result",
+    "Suchergebnisse": "Arama sonuçları",
+    "Tabelle": "Tablo",
+    "Vorschau": "Görünüş"
+  }
+}

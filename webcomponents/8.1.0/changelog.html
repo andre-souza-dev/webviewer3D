@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>PSOL Web Components Developer Readme</title>
+  <style>
+    @font-face {
+      font-family: octicons-anchor;
+      src: url(data:font/woff;charset=utf-8;base64,d09GRgABAAAAAAYcAA0AAAAACjQAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABGRlRNAAABMAAAABwAAAAca8vGTk9TLzIAAAFMAAAARAAAAFZG1VHVY21hcAAAAZAAAAA+AAABQgAP9AdjdnQgAAAB0AAAAAQAAAAEACICiGdhc3AAAAHUAAAACAAAAAj//wADZ2x5ZgAAAdwAAADRAAABEKyikaNoZWFkAAACsAAAAC0AAAA2AtXoA2hoZWEAAALgAAAAHAAAACQHngNFaG10eAAAAvwAAAAQAAAAEAwAACJsb2NhAAADDAAAAAoAAAAKALIAVG1heHAAAAMYAAAAHwAAACABEAB2bmFtZQAAAzgAAALBAAAFu3I9x/Nwb3N0AAAF/AAAAB0AAAAvaoFvbwAAAAEAAAAAzBdyYwAAAADP2IQvAAAAAM/bz7t4nGNgZGFgnMDAysDB1Ml0hoGBoR9CM75mMGLkYGBgYmBlZsAKAtJcUxgcPsR8iGF2+O/AEMPsznAYKMwIkgMA5REMOXicY2BgYGaAYBkGRgYQsAHyGMF8FgYFIM0ChED+h5j//yEk/3KoSgZGNgYYk4GRCUgwMaACRoZhDwCs7QgGAAAAIgKIAAAAAf//AAJ4nHWMMQrCQBBF/0zWrCCIKUQsTDCL2EXMohYGSSmorScInsRGL2DOYJe0Ntp7BK+gJ1BxF1stZvjz/v8DRghQzEc4kIgKwiAppcA9LtzKLSkdNhKFY3HF4lK69ExKslx7Xa+vPRVS43G98vG1DnkDMIBUgFN0MDXflU8tbaZOUkXUH0+U27RoRpOIyCKjbMCVejwypzJJG4jIwb43rfl6wbwanocrJm9XFYfskuVC5K/TPyczNU7b84CXcbxks1Un6H6tLH9vf2LRnn8Ax7A5WQAAAHicY2BkYGAA4teL1+yI57f5ysDNwgAC529f0kOmWRiYVgEpDgYmEA8AUzEKsQAAAHicY2BkYGB2+O/AEMPCAAJAkpEBFbAAADgKAe0EAAAiAAAAAAQAAAAEAAAAAAAAKgAqACoAiAAAeJxjYGRgYGBhsGFgYgABEMkFhAwM/xn0QAIAD6YBhwB4nI1Ty07cMBS9QwKlQapQW3VXySvEqDCZGbGaHULiIQ1FKgjWMxknMfLEke2A+IJu+wntrt/QbVf9gG75jK577Lg8K1qQPCfnnnt8fX1NRC/pmjrk/zprC+8D7tBy9DHgBXoWfQ44Av8t4Bj4Z8CLtBL9CniJluPXASf0Lm4CXqFX8Q84dOLnMB17N4c7tBo1AS/Qi+hTwBH4rwHHwN8DXqQ30XXAS7QaLwSc0Gn8NuAVWou/gFmnjLrEaEh9GmDdDGgL3B4JsrRPDU2hTOiMSuJUIdKQQayiAth69r6akSSFqIJuA19TrzCIaY8sIoxyrNIrL//pw7A2iMygkX5vDj+G+kuoLdX4GlGK/8Lnlz6/h9MpmoO9rafrz7ILXEHHaAx95s9lsI7AHNMBWEZHULnfAXwG9/ZqdzLI08iuwRloXE8kfhXYAvE23+23DU3t626rbs8/8adv+9DWknsHp3E17oCf+Z48rvEQNZ78paYM38qfk3v/u3l3u3GXN2Dmvmvpf1Srwk3pB/VSsp512bA/GG5i2WJ7wu430yQ5K3nFGiOqgtmSB5pJVSizwaacmUZzZhXLlZTq8qGGFY2YcSkqbth6aW1tRmlaCFs2016m5qn36SbJrqosG4uMV4aP2PHBmB3tjtmgN2izkGQyLWprekbIntJFing32a5rKWCN/SdSoga45EJykyQ7asZvHQ8PTm6cslIpwyeyjbVltNikc2HTR7YKh9LBl9DADC0U/jLcBZDKrMhUBfQBvXRzLtFtjU9eNHKin0x5InTqb8lNpfKv1s1xHzTXRqgKzek/mb7nB8RZTCDhGEX3kK/8Q75AmUM/eLkfA+0Hi908Kx4eNsMgudg5GLdRD7a84npi+YxNr5i5KIbW5izXas7cHXIMAau1OueZhfj+cOcP3P8MNIWLyYOBuxL6DRylJ4cAAAB4nGNgYoAALjDJyIAOWMCiTIxMLDmZedkABtIBygAAAA==) format('woff');
+    }
+    
+    .markdown-body {
+      -ms-text-size-adjust: 100%;
+      -webkit-text-size-adjust: 100%;
+      color: #333;
+      overflow: hidden;
+      font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      word-wrap: break-word;
+    }
+    
+    .markdown-body a {
+      background: transparent;
+    }
+    
+    .markdown-body a:active,
+    .markdown-body a:hover {
+      outline: 0;
+    }
+    
+    .markdown-body strong {
+      font-weight: bold;
+    }
+    
+    .markdown-body h1 {
+      font-size: 2em;
+      margin: 0.67em 0;
+    }
+    
+    .markdown-body img {
+      border: 0;
+    }
+    
+    .markdown-body hr {
+      box-sizing: content-box;
+      height: 0;
+    }
+    
+    .markdown-body pre {
+      overflow: auto;
+    }
+    
+    .markdown-body code,
+    .markdown-body kbd,
+    .markdown-body pre {
+      font-family: monospace, monospace;
+      font-size: 1em;
+    }
+    
+    .markdown-body input {
+      color: inherit;
+      font: inherit;
+      margin: 0;
+    }
+    
+    .markdown-body html input[disabled] {
+      cursor: default;
+    }
+    
+    .markdown-body input {
+      line-height: normal;
+    }
+    
+    .markdown-body input[type="checkbox"] {
+      box-sizing: border-box;
+      padding: 0;
+    }
+    
+    .markdown-body table {
+      border-collapse: collapse;
+      border-spacing: 0;
+    }
+    
+    .markdown-body td,
+    .markdown-body th {
+      padding: 0;
+    }
+    
+    .markdown-body * {
+      box-sizing: border-box;
+    }
+    
+    .markdown-body input {
+      font: 13px/1.4 Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+    }
+    
+    .markdown-body a {
+      color: #4183c4;
+      text-decoration: none;
+    }
+    
+    .markdown-body a:hover,
+    .markdown-body a:active {
+      text-decoration: underline;
+    }
+    
+    .markdown-body hr {
+      height: 0;
+      margin: 15px 0;
+      overflow: hidden;
+      background: transparent;
+      border: 0;
+      border-bottom: 1px solid #ddd;
+    }
+    
+    .markdown-body hr:before {
+      display: table;
+      content: "";
+    }
+    
+    .markdown-body hr:after {
+      display: table;
+      clear: both;
+      content: "";
+    }
+    
+    .markdown-body h1,
+    .markdown-body h2,
+    .markdown-body h3,
+    .markdown-body h4,
+    .markdown-body h5,
+    .markdown-body h6 {
+      margin-top: 15px;
+      margin-bottom: 15px;
+      line-height: 1.1;
+    }
+    
+    .markdown-body h1 {
+      font-size: 30px;
+    }
+    
+    .markdown-body h2 {
+      font-size: 21px;
+    }
+    
+    .markdown-body h3 {
+      font-size: 16px;
+    }
+    
+    .markdown-body h4 {
+      font-size: 14px;
+    }
+    
+    .markdown-body h5 {
+      font-size: 12px;
+    }
+    
+    .markdown-body h6 {
+      font-size: 11px;
+    }
+    
+    .markdown-body blockquote {
+      margin: 0;
+    }
+    
+    .markdown-body ul,
+    .markdown-body ol {
+      padding: 0;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    
+    .markdown-body ol ol,
+    .markdown-body ul ol {
+      list-style-type: lower-roman;
+    }
+    
+    .markdown-body ul ul ol,
+    .markdown-body ul ol ol,
+    .markdown-body ol ul ol,
+    .markdown-body ol ol ol {
+      list-style-type: lower-alpha;
+    }
+    
+    .markdown-body dd {
+      margin-left: 0;
+    }
+    
+    .markdown-body code {
+      font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+      font-size: 12px;
+    }
+    
+    .markdown-body pre {
+      margin-top: 0;
+      margin-bottom: 0;
+      font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    }
+    
+    .markdown-body .octicon {
+      font: normal normal normal 16px/1 octicons-anchor;
+      display: inline-block;
+      text-decoration: none;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+    
+    .markdown-body .octicon-link:before {
+      content: '\f05c';
+    }
+    
+    .markdown-body>*:first-child {
+      margin-top: 0 !important;
+    }
+    
+    .markdown-body>*:last-child {
+      margin-bottom: 0 !important;
+    }
+    
+    .markdown-body .anchor {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      padding-right: 6px;
+      padding-left: 30px;
+      margin-left: -30px;
+    }
+    
+    .markdown-body .anchor:focus {
+      outline: none;
+    }
+    
+    .markdown-body h1,
+    .markdown-body h2,
+    .markdown-body h3,
+    .markdown-body h4,
+    .markdown-body h5,
+    .markdown-body h6 {
+      position: relative;
+      margin-top: 1em;
+      margin-bottom: 16px;
+      font-weight: bold;
+      line-height: 1.4;
+    }
+    
+    .markdown-body h1 .octicon-link,
+    .markdown-body h2 .octicon-link,
+    .markdown-body h3 .octicon-link,
+    .markdown-body h4 .octicon-link,
+    .markdown-body h5 .octicon-link,
+    .markdown-body h6 .octicon-link {
+      display: none;
+      color: #000;
+      vertical-align: middle;
+    }
+    
+    .markdown-body h1:hover .anchor,
+    .markdown-body h2:hover .anchor,
+    .markdown-body h3:hover .anchor,
+    .markdown-body h4:hover .anchor,
+    .markdown-body h5:hover .anchor,
+    .markdown-body h6:hover .anchor {
+      padding-left: 8px;
+      margin-left: -30px;
+      text-decoration: none;
+    }
+    
+    .markdown-body h1:hover .anchor .octicon-link,
+    .markdown-body h2:hover .anchor .octicon-link,
+    .markdown-body h3:hover .anchor .octicon-link,
+    .markdown-body h4:hover .anchor .octicon-link,
+    .markdown-body h5:hover .anchor .octicon-link,
+    .markdown-body h6:hover .anchor .octicon-link {
+      display: inline-block;
+    }
+    
+    .markdown-body h1 {
+      padding-bottom: 0.3em;
+      font-size: 2.25em;
+      line-height: 1.2;
+      border-bottom: 1px solid #eee;
+    }
+    
+    .markdown-body h1 .anchor {
+      line-height: 1;
+    }
+    
+    .markdown-body h2 {
+      padding-bottom: 0.3em;
+      font-size: 1.75em;
+      line-height: 1.225;
+      border-bottom: 1px solid #eee;
+    }
+    
+    .markdown-body h2 .anchor {
+      line-height: 1;
+    }
+    
+    .markdown-body h3 {
+      font-size: 1.5em;
+      line-height: 1.43;
+    }
+    
+    .markdown-body h3 .anchor {
+      line-height: 1.2;
+    }
+    
+    .markdown-body h4 {
+      font-size: 1.25em;
+    }
+    
+    .markdown-body h4 .anchor {
+      line-height: 1.2;
+    }
+    
+    .markdown-body h5 {
+      font-size: 1em;
+    }
+    
+    .markdown-body h5 .anchor {
+      line-height: 1.1;
+    }
+    
+    .markdown-body h6 {
+      font-size: 1em;
+      color: #777;
+    }
+    
+    .markdown-body h6 .anchor {
+      line-height: 1.1;
+    }
+    
+    .markdown-body p,
+    .markdown-body blockquote,
+    .markdown-body ul,
+    .markdown-body ol,
+    .markdown-body dl,
+    .markdown-body table,
+    .markdown-body pre {
+      margin-top: 0;
+      margin-bottom: 16px;
+    }
+    
+    .markdown-body hr {
+      height: 4px;
+      padding: 0;
+      margin: 16px 0;
+      background-color: #e7e7e7;
+      border: 0 none;
+    }
+    
+    .markdown-body ul,
+    .markdown-body ol {
+      padding-left: 2em;
+    }
+    
+    .markdown-body ul ul,
+    .markdown-body ul ol,
+    .markdown-body ol ol,
+    .markdown-body ol ul {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    
+    .markdown-body li>p {
+      margin-top: 16px;
+    }
+    
+    .markdown-body dl {
+      padding: 0;
+    }
+    
+    .markdown-body dl dt {
+      padding: 0;
+      margin-top: 16px;
+      font-size: 1em;
+      font-style: italic;
+      font-weight: bold;
+    }
+    
+    .markdown-body dl dd {
+      padding: 0 16px;
+      margin-bottom: 16px;
+    }
+    
+    .markdown-body blockquote {
+      padding: 0 15px;
+      color: #777;
+      border-left: 4px solid #ddd;
+    }
+    
+    .markdown-body blockquote>:first-child {
+      margin-top: 0;
+    }
+    
+    .markdown-body blockquote>:last-child {
+      margin-bottom: 0;
+    }
+    
+    .markdown-body table {
+      display: block;
+      width: 100%;
+      overflow: auto;
+      word-break: normal;
+      word-break: keep-all;
+    }
+    
+    .markdown-body table th {
+      font-weight: bold;
+    }
+    
+    .markdown-body table th,
+    .markdown-body table td {
+      padding: 6px 13px;
+      border: 1px solid #ddd;
+    }
+    
+    .markdown-body table tr {
+      background-color: #fff;
+      border-top: 1px solid #ccc;
+    }
+    
+    .markdown-body table tr:nth-child(2n) {
+      background-color: #f8f8f8;
+    }
+    
+    .markdown-body img {
+      max-width: 100%;
+      box-sizing: border-box;
+      -moz-box-sizing: border-box;
+    }
+    
+    .markdown-body code {
+      padding: 0;
+      padding-top: 0.2em;
+      padding-bottom: 0.2em;
+      margin: 0;
+      font-size: 85%;
+      background-color: rgba(0, 0, 0, 0.04);
+      border-radius: 3px;
+    }
+    
+    .markdown-body code:before,
+    .markdown-body code:after {
+      letter-spacing: -0.2em;
+      content: "\00a0";
+    }
+    
+    .markdown-body pre>code {
+      padding: 0;
+      margin: 0;
+      font-size: 100%;
+      word-break: normal;
+      white-space: pre;
+      background: transparent;
+      border: 0;
+    }
+    
+    .markdown-body .highlight {
+      margin-bottom: 16px;
+    }
+    
+    .markdown-body .highlight pre,
+    .markdown-body pre {
+      padding: 16px;
+      overflow: auto;
+      font-size: 85%;
+      line-height: 1.45;
+      background-color: #f7f7f7;
+      border-radius: 3px;
+    }
+    
+    .markdown-body .highlight pre {
+      margin-bottom: 0;
+      word-break: normal;
+    }
+    
+    .markdown-body pre {
+      word-wrap: normal;
+    }
+    
+    .markdown-body pre code {
+      display: inline;
+      max-width: initial;
+      padding: 0;
+      margin: 0;
+      overflow: initial;
+      line-height: inherit;
+      word-wrap: normal;
+      background-color: transparent;
+      border: 0;
+    }
+    
+    .markdown-body pre code:before,
+    .markdown-body pre code:after {
+      content: normal;
+    }
+    
+    .markdown-body kbd {
+      display: inline-block;
+      padding: 3px 5px;
+      font-size: 11px;
+      line-height: 10px;
+      color: #555;
+      vertical-align: middle;
+      background-color: #fcfcfc;
+      border: solid 1px #ccc;
+      border-bottom-color: #bbb;
+      border-radius: 3px;
+      box-shadow: inset 0 -1px 0 #bbb;
+    }
+    
+    .markdown-body .pl-c {
+      color: #969896;
+    }
+    
+    .markdown-body .pl-c1,
+    .markdown-body .pl-mdh,
+    .markdown-body .pl-mm,
+    .markdown-body .pl-mp,
+    .markdown-body .pl-mr,
+    .markdown-body .pl-s1 .pl-v,
+    .markdown-body .pl-s3,
+    .markdown-body .pl-sc,
+    .markdown-body .pl-sv {
+      color: #0086b3;
+    }
+    
+    .markdown-body .pl-e,
+    .markdown-body .pl-en {
+      color: #795da3;
+    }
+    
+    .markdown-body .pl-s1 .pl-s2,
+    .markdown-body .pl-smi,
+    .markdown-body .pl-smp,
+    .markdown-body .pl-stj,
+    .markdown-body .pl-vo,
+    .markdown-body .pl-vpf {
+      color: #333;
+    }
+    
+    .markdown-body .pl-ent {
+      color: #63a35c;
+    }
+    
+    .markdown-body .pl-k,
+    .markdown-body .pl-s,
+    .markdown-body .pl-st {
+      color: #a71d5d;
+    }
+    
+    .markdown-body .pl-pds,
+    .markdown-body .pl-s1,
+    .markdown-body .pl-s1 .pl-pse .pl-s2,
+    .markdown-body .pl-sr,
+    .markdown-body .pl-sr .pl-cce,
+    .markdown-body .pl-sr .pl-sra,
+    .markdown-body .pl-sr .pl-sre,
+    .markdown-body .pl-src {
+      color: #183691;
+    }
+    
+    .markdown-body .pl-v {
+      color: #ed6a43;
+    }
+    
+    .markdown-body .pl-id {
+      color: #b52a1d;
+    }
+    
+    .markdown-body .pl-ii {
+      background-color: #b52a1d;
+      color: #f8f8f8;
+    }
+    
+    .markdown-body .pl-sr .pl-cce {
+      color: #63a35c;
+      font-weight: bold;
+    }
+    
+    .markdown-body .pl-ml {
+      color: #693a17;
+    }
+    
+    .markdown-body .pl-mh,
+    .markdown-body .pl-mh .pl-en,
+    .markdown-body .pl-ms {
+      color: #1d3e81;
+      font-weight: bold;
+    }
+    
+    .markdown-body .pl-mq {
+      color: #008080;
+    }
+    
+    .markdown-body .pl-mi {
+      color: #333;
+      font-style: italic;
+    }
+    
+    .markdown-body .pl-mb {
+      color: #333;
+      font-weight: bold;
+    }
+    
+    .markdown-body .pl-md,
+    .markdown-body .pl-mdhf {
+      background-color: #ffecec;
+      color: #bd2c00;
+    }
+    
+    .markdown-body .pl-mdht,
+    .markdown-body .pl-mi1 {
+      background-color: #eaffea;
+      color: #55a532;
+    }
+    
+    .markdown-body .pl-mdr {
+      color: #795da3;
+      font-weight: bold;
+    }
+    
+    .markdown-body .pl-mo {
+      color: #1d3e81;
+    }
+    
+    .markdown-body kbd {
+      display: inline-block;
+      padding: 3px 5px;
+      font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+      line-height: 10px;
+      color: #555;
+      vertical-align: middle;
+      background-color: #fcfcfc;
+      border: solid 1px #ccc;
+      border-bottom-color: #bbb;
+      border-radius: 3px;
+      box-shadow: inset 0 -1px 0 #bbb;
+    }
+    
+    .markdown-body .task-list-item {
+      list-style-type: none;
+    }
+    
+    .markdown-body .task-list-item+.task-list-item {
+      margin-top: 3px;
+    }
+    
+    .markdown-body .task-list-item input {
+      float: left;
+      margin: 0.3em 0 0.25em -1.6em;
+      vertical-align: middle;
+    }
+    
+    .markdown-body:checked+.radio-label {
+      z-index: 1;
+      position: relative;
+      border-color: #4183c4;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="markdown-body">
+    <h2 id="8.1.0">[8.1.0] - 2023-04-05</h2><ul><li><p><strong>Measure</strong></p><ul><li><span>Fixed</span><ul><li>Measure Dialog out of bounds (#124205)</li><li>Fix wrong amount of radialSegments in ThreadDetectionMesh (#128950)</li></ul></li></ul></li><li><p><strong>WebViewer3D</strong></p><ul><li><span>Added</span><ul><li>Reduce size and spacing for the copyright text when the viewer size is to small (#126513)</li><li>Dimensions: Spacing between text and arrows are missing (#126983)</li><li>Improve api documentation for WebViewer3D (#128164)</li><li>Make preferformat setting optional and set default value to 'ASM_GLTF' (#128275)</li></ul></li><li><span>Fixed</span><ul><li>When opening a part which has no geometry data and then opening a regular part, the error panel is still visible (#126515)</li><li>Custom dimension not displayed correctly after update to PCOM version 9.5. (#128500)</li><li>AHP - 3D Preview is not loading (#129539)</li><li>Map unknown font glyphs to svg path (#129693)</li><li>viewer displays empty message with red "x" when being loaded (#118379)</li><li>Position of the Axis on viewer are fixed and not tracking model movement (#128431)</li></ul></li></ul></li><li><p><strong>Cubesketcher</strong></p><ul><li><span>Fixed</span><ul><li>Drawing with some touch devices does not work (#126569)</li></ul></li></ul></li></ul><h2 id="8.0.0">[8.0.0] - 2021-01-28</h2><ul><li><p><strong>Component TableVertical</strong></p><ul><li><span>Changed</span><ul><li>Variable groups have now a fixed order in which they are displayed. Can also be set via parameter "varGroupsOrder" (# 113975)</li></ul></li></ul></li><li><p><strong>Component TableCompare</strong></p><ul><li><span>Changed</span><ul><li>When variable grouping is active, only ERP-variables will be grouped seperately. (#113975)</li></ul></li></ul></li><li><p><strong>WebViewer3D</strong></p><ul><li><span>Fixed</span><ul><li>Actions stay active on new loaded part (#117441)</li><li>Cut mode is broken after using teleport (#110331)</li><li>STL models not visible after loading into WebViewer (#117217)</li><li>VR mode is not working correctly (#117265)</li><li>Cut mode doesn't work in ShadeMode Line (#117659)</li><li>Compare mode: transform controls are not visible after switching from opposed to overlay mode with previous selection (#117889)</li><li>Transparency feature causes wrong presentation in cut mode rendering (#118489)</li><li>Hotspot-Labels incorrect layout in IE11 (#118077)</li><li>Editable dimension throws error on click (#116797)</li><li>Threads don't change color on some parts (#119651)</li><li>correct default cut colors of for compare parts</li><li>The image pen.png (Hotspots) was not found (#119959)</li><li>AR feature doesn't work: get model with orderData (#121447)</li><li>Favorite button bar overlaps "(c) 2020 powered by CADENAS" (#122113)</li><li>Cannot load external 3d formats on Partcommunity which load with ConvertLoader (#122145)</li><li>Missing Textures in GLB Export for AR Viewer</li><li>Scaling for AR Viewer (#116119)</li><li>Move and modify the "Powered by" link (#123045)</li><li>Custom dimension error (#123499)</li><li>Error handling GLTF (#120155)</li><li>Handle empty assembly (#121729)</li><li>Tooltip "Show origin axes" translation (#126689)</li></ul></li><li><span>Added</span><ul><li>Add edges to native types (DAE, OBJ, 3DS, ...) (#112631)</li><li>Select part in component (raycasting), zoom to choosen part (#77819)</li><li>Set transparency of individual part (#79351)</li><li>Add webgl viewer setting to control if hotspots are initially collapsed or open (#119319)</li><li>Compare 3D: switch to GLTF instead of PJV (#119249)</li><li>Add webglViewerSettings option "autoRotate" for auto-starting the animation after a part is loaded (#122227)</li></ul></li></ul></li><li><p><strong>WebViewer2D</strong></p><ul><li><span>Fixed</span><ul><li>SVG detection can't handle orderdata response (#117131)</li><li>UL: EDA Viewer does not work on IE 11 (#120283)</li></ul></li></ul></li><li><p><strong>Measure</strong></p><ul><li><span>Fixed</span><ul><li>Measurements sometimes wrong (probably between parts within assembly) (#126263)</li></ul></li><li><span>Added</span><ul><li>Add measurement function (#82409)</li><li>Compare results to threads in measure (#126325)</li></ul></li></ul></li><li><p><strong>EOL Dialog</strong></p><ul><li><span>Fixed</span><ul><li>eol dialog does not disappear after loading (#124017)</li><li>EOL does not work (#121159)</li><li>Change EOL state for updateView to display correct EOL text (#124127)</li></ul></li></ul></li></ul><h2 id="7.0.0">[7.0.0] - 2020-03-19</h2><ul><li><p><strong>Component CubeSketcher</strong></p><ul><li><span>Added</span><ul><li>Possibility to set the minimum search quality, new properties added in default settings 'showSearchOptions, minResultQuality' (#109137)</li></ul></li></ul></li><li><p><strong>Component SliderBase</strong></p><ul><li><span>Fixed</span><ul><li><code>INPUT_POSITION.NONE</code> shows input field on right side of slider</li></ul></li></ul></li><li><p><strong>Component TableCompare</strong></p><ul><li><span>Added</span><ul><li>Callback function when tables got loaded. <code>onTablesLoaded(tables)</code></li><li>Callback function when table got removed. <code>onTableRemoved(removedTableData)</code></li><li>Callback function when master table got changed. <code>onMasterChanged(newMasterTableData, arrayIndex, tableArray)</code></li><li>Callback function when 1st or 2nd part is set for 3d compare. <code>onCompare3dPartSelected(partsFor3dCompare)</code> (#109859)</li><li>Implemented variable grouping (#104893)</li><li>Controls to set 1st and 2nd part for 3d compare (#109859)</li><li>Setters in order to set parts for 3d compare <code>setPartFor3dCompare(index, isFirst)</code> <code>setPartsfor3dCompare(firstIndex, secondIndex)</code> (#109859)</li><li>Adjust initial camera view so that dimensions are visible for one side (#110155)</li></ul></li><li><span>Fixed</span><ul><li>Table compare won't show any variables when vargroups are missing from the table result (#111793)</li></ul></li><li><span>Changed</span><ul><li>3d handlers in table compare get selected automatically for the first and second part that is added for compare (#111795)</li></ul></li></ul></li><li><p><strong>Component IndexBrowsing</strong></p><ul><li><span>Added</span><ul><li>Add option to include assistants for when creating IndexBrowsing component (#104617)</li><li>Added dynamic filter assistant handling (#102859)</li><li>callback for search button of dynamic filter assistant "onDynamicFilterAssistantSearchClicked" (#102859)</li></ul></li></ul></li><li><p><strong>Component drawing</strong></p><ul><li><span>Fixed</span><ul><li>Position of brush size and color selector popup is not correct, when viewing component is not left aligned (#104471)</li></ul></li></ul></li><li><p><strong>Core</strong></p><ul><li><span>Added</span><ul><li>export inherits to psol.thirdparty.inherits</li><li>method to retrieve current erp user: <code>psol.erp.getCurrentUser()</code></li></ul></li></ul></li><li><p><strong>WebViewer2D</strong></p><ul><li><span>Changed</span><ul><li>Use techviews also for DATABASE2D Projects (#101469)</li></ul></li><li><span>Fixed</span><ul><li>Projection views are empty (#110799)</li><li>Prevent CSS bleeding in SVGs (#112299)</li><li>Line with and colors are not correct, because of scaling and subpixel rendering (#108363 / #111137)</li></ul></li></ul></li><li><p><strong>WebViewer3D</strong></p><ul><li><span>Fixed</span><ul><li>Crash when cleanup (#103081)</li><li>Measure grid doesn't work correctly in compare mode (#104281)</li><li>Cut mode in compare mode doesn't work (#92415)</li><li>Position of hotspot not correct on 1st draw (#104657)</li><li>Display cut offset with units. (#101887)</li><li>Dimensions with fontsize 0 should be ignored during load (#104425)</li><li>Compare: When opposed each part get it's own measuregrid (#105871)</li><li>Only edges rendering: has white faces (#101685)</li><li>Migrate lines to threejs line2 (#108009)</li><li>Black planes when loading aventics part a second time (#108557)</li><li>Cut mode is broken in edge render mode (#108267)</li><li>Wrong zoom to chosen part (#109987)</li><li>Clipping planes hit to early when activating measuregrid on really small parts (#109993)</li><li>Compare mode: incorrect state after loading parts a second time (#111395)</li><li>Measuregrid of bim parts (z-axis up) has wrong rotation (#112371)</li><li>Bim parts (z axis up) are not in focus of the camera after loading (#111409)</li><li>CAD models are being 'cut' when zoomed in PCOM9 (#112875)</li><li>Festo EXPT hotspots are wrong positioned (#110443)</li><li>Can't open projects without geometry (#116597)</li><li>Compare 3D with inch and metric part/assembly does not look correct (#113387)</li></ul></li><li><span>Added</span><ul><li>Display cut offset with units. (#101887)</li><li>Improve axis control in cut mode. (#83031)</li><li>Cross-section opposite direction. (#85073)</li><li>Create outline for the different parts in cut mode. (#92287)</li><li>Using 3 colors for P1, P2 and result (colors should be a setting when creating the viewer) (#101917)</li><li>Add new hotspot type for gltf / zjv coming from pappserver (#105093)</li><li>Add basic alignement functions for compare 3d (#104481)</li><li>Optimize Measure Grid (#94691)</li><li>Remove all THREE.Geometry entities from our scene graph (#107465)</li></ul></li></ul></li><li><p><strong>Component dialogBase</strong></p><ul><li><span>Fixed</span><ul><li>Buttons in dialog should be right aligned (#103155)</li></ul></li></ul></li><li><p><strong>Component Base</strong></p><ul><li><span>Added</span><ul><li>Add 3rd party licenses and modules list (#100271)</li></ul></li></ul></li><li><p><strong>EOLDialog</strong></p><ul><li><span>Fixed</span><ul><li>EOL Dialog: BRITE WARNING (#105769)</li></ul></li></ul></li><li><p><strong>Component TableVertical</strong></p><ul><li><span>Added</span><ul><li>Implemented variable grouping (#104893)</li></ul></li></ul></li></ul><h2 id="6.1.0">[6.1.0] - 2019-06-07</h2><ul><li><p><strong>Component Assistant</strong></p><ul><li><span>Fixed</span><ul><li>Show invalid table data, when json is invalid (#105529)</li></ul></li></ul></li><li><p><strong>Component IndexBrowsing</strong></p><ul><li><span>Fixed</span><ul><li>Geometric similarity not shown in list view (#102023)</li><li>Collections text is wrapped and destroy tiles layout (#104673)</li></ul></li></ul></li><li><p><strong>Component WebViewer2D</strong></p><ul><li><span>Fixed</span><ul><li>loadSVG() is now public</li><li>Automatic dimension not visible (or just fragments) in 2D derivation (#103571)</li><li>Mousewheel zoom scrolls the complete page (#106105)</li><li>IE11 crash because of Array.from (#107609)</li></ul></li></ul></li><li><p><strong>Component WebViewer3D</strong></p><ul><li><span>Fixed</span><ul><li>Texture loading via CORS (#102849)</li><li>Different color of textures when loading via GLTF (#102637)</li><li>Missing units in measuregrid when loading gltf (#102635)</li><li>Compare View in PARTcloud (#104509)</li><li>Model position buttons showing they have dimensions for all views (#106305)</li><li>Hotspot is not visible after turning on/off "section cut" (#107673)</li><li>GLTF materials with isDefaultMaterial do not respect the material preset (#108257)</li><li>Add an option to enable/disable hotspots (#108291)</li><li>PARTcloud - movement mode and animation bug (#108237)</li><li>Rotation speed problem after viewer resize/display property change (visible with environments) (#108269)</li><li>Can't get out of cardboard viewer (#101175)</li><li>Touch controls on firefox not working (#109869)</li></ul></li><li><span>Added</span><ul><li>Add setting to control the preferformat (default off) (#103001)</li></ul></li></ul></li><li><p><strong>Component Table</strong></p><ul><li><span>Fixed</span><ul><li>Variable Edit dialog has weird layout when there is an input field (#101217)</li></ul></li></ul></li></ul><h2 id="6.0.0">[6.0.0] - 2017-06-11</h2><ul><li><p><strong>Component IndexBrowsing</strong></p><ul><li><span>Fixed</span><ul><li>When scrolling through catalogs hot character menu does not work (#85015)</li></ul></li><li><span>Added</span><ul><li>Text ellipsis "..." when node description is overflowing container (#99925)</li></ul></li></ul></li><li><p><strong>Component SearchBar</strong></p><ul><li><span>Changed</span><ul><li>Delete button is hidden as long as there is no text in search bar (#101137)</li><li>ERP Status Icons in search result line is not displayed correctly (#100903)</li></ul></li></ul></li><li><p><strong>Component WebViewer2D</strong></p><ul><li><span>Added</span><ul><li>Implement handling of SVG's (#96001)</li></ul></li><li><span>Fixed</span><ul><li>Pinch to zoom is always zooming to the centre (#85017)</li></ul></li><li><span>Fixed</span><ul><li>Resize resets toggled lines (#105517)</li></ul></li><li><span>Changed</span><ul><li>Set backgroundcolor in WebViewer2D to white (#101773)</li></ul></li></ul></li><li><p><strong>Component WebViewer3D</strong></p><ul><li><span>Added</span><ul><li>Attached lights to camera (#98669)</li><li>Enabled GammaOutput for WebGLRenderer (#98669)</li><li>Set default texture encoding to sRGB (#98669)</li></ul></li><li><span>Fixed</span><ul><li>FBXLoader doesn't work (#96247)</li><li>Environment map on model should behave like the object is rotating (#98669)</li><li>Visibility issues with part from specific angles (#99099)</li><li>Hittest for clickable dimensions are not correct (#99867)</li><li>Weird camera movement on Android (#100051)</li><li>Adjustment of PBR, Lighting and EnvMap to match with PSOL (#100687)</li><li>Cross section does not work correctly for holes (#84963)</li></ul></li></ul></li><li><p><strong>Component dialogBase</strong></p><ul><li><span>Fixed</span><ul><li>Dialog size in iframes (#85501)</li><li>Refactor Dialog Component to use flexbox (#97469)</li><li>Progress dialog header has wired layout (#100587)</li></ul></li></ul></li><li><p><strong>Component Table</strong></p><ul><li><span>Fixed</span><ul><li>[iOS] Variable selection not scroll able via touch on iOS (#100191)</li></ul></li></ul></li><li><p><strong>Component ImageViewer</strong></p><ul><li><span>Fixed</span><ul><li>Imageviewer panning in dialog breaks layout (#100493)</li></ul></li></ul></li></ul><h2 id="5.0.0">[5.0.0] - 2017-04-03</h2><ul><li><p><strong>Component QRScan</strong></p><ul><li><span>Added</span><ul><li>Added area scanning to the component (#93447)</li></ul></li></ul></li><li><p><strong>PMath</strong></p><ul><li><span>Added</span><ul><li>Create psol.math module for math related stuff (#89211)</li></ul></li></ul></li><li><p><strong>Component RadialMenu</strong></p><ul><li><span>Fixed</span><ul><li>Recalculate positions of all actions if an action is being dynamically hidden/showed (#80325)</li></ul></li></ul></li><li><p><strong>Component WebViewer2D</strong></p><ul><li><span>Added</span><ul><li>Add method to load 2d views by order data (#noissue)</li></ul></li><li><span>Fixed</span><ul><li>Trigger zoomAll after resize, if view hasn't been zoomed manually yet (#noissue)</li><li>Dynamic help view (#89613)</li></ul></li></ul></li><li><p><strong>Component WebViewer3D</strong></p><ul><li><span>Added</span><ul><li>Create extra part from colored faces from PJV (#90221)</li><li>Add method to enable only specific mapped vars (#90387)</li><li>Create a base shader for the different shader.js files - prevent code duplication(#90145)</li><li>Add method to disable specific mapped vars(#90387)</li><li>One shader for every basic material (#90511)</li><li>Instead of disabling features switch to perspective camera when it is needed (#90885)</li><li>Measuring grid in WebGL viewer (#86513)</li><li>Change the color of section view (#89555)</li><li>Added flag for hiding custom dimensions on start up (#92289)</li><li>Create flag for webviewer to disable VR even if the device is a mobile one (#92825)</li><li>Loading of GLTF Files (#94689)</li><li>Added Error Handling for new Loaders (#94687)</li><li>Dimensions for GLTF Assembly (#94705)</li><li>GLBLoader/GLTFLoader: Check if loaded .glb/.gltf is a CNS one or not (#94725)</li><li>Load OBJ+MTL files into viewer (#89171)</li><li>HotSpots: Option for HotSpots to be open on initialization (#96223)</li><li>Improve code of cnsthree_loader (#96241)</li><li>Read hotspots from pjv (#95195)</li><li>Implement silhuettes for CNS parts in GLTFLoader (#96471)</li><li>ZJVObjects: Convert to typescript (#96291)</li><li>Add loadable formats: ase, lwo, lws, ifc, blend (#98601)</li><li>Support vertex colors for ply (#98595)</li></ul></li><li><span>Fixed</span><ul><li>Show dimensions after imploding, not when it starts (#89219)</li><li>Explosion mode, some parts always jump when started (#88447)</li><li>Set PBR values via uniform instead of attribute buffer (#89911)</li><li>Cut mode on edge mode (depth rendering) (#89511)</li><li>Zoom to object action now behaves the same as double tap (#84817)</li><li>Dreamoc pyramid view is distorted (#89797)</li><li>Correct material in cut mode is now used (#92111)</li><li>Fixed lines in cut mode, they were different than normal (#92285)</li><li>Properly clean up transform controls and keep them active when switching camera (#92291)</li><li>Parts in 3d compare are now colored (#90509)</li><li>Lines behind transparent parts are now rendered (#89003)</li><li>Dynamic help view (#89613)</li><li>Remove pen icon from editable dimensions if they are disabled at run time (#92537)</li><li>[Measure Grid] lines are way to thick, arrows can't be seen (#92633)</li><li>On explosion the camera/part don't instantly jump => smooth animation (#92637)</li><li>Set correction orientation when leaving VR, Dreamoc etc (#89803)</li><li>Typings for WebViewer3D (#94591)</li><li>Added Scenecontroller and fixed rotation on mesh rotation mode (#83637)</li><li>Updating of hotspot line length (#94787)</li><li>Bluebox: remove 'FLIP' from shaders and just roate the camera around z-axis (#94843)</li><li>Event handling issue (#97657)</li><li>Dimensions: Invisible dimensions overlays visible ones (#97125)</li><li>Preview load again in older browsers, e.g. FF52 (#100799)</li><li>Connections points are displayed wrong in viewer since (#100727)</li></ul></li></ul></li><li><p><strong>Component ImageViewer</strong></p><ul><li><span>Added</span><ul><li>Set start image and add function to set active image (#90171)</li><li>Double tap zoom, pinch zoom and panning for images (#89175)</li></ul></li></ul></li><li><p><strong>Component IndexBrowsing</strong></p><ul><li><span>Added</span><ul><li>Possibility to show / handle results of line based searches (#89899)</li><li>Component is able to set the size of it's parent container, new property added in default settings 'parentAutoHeight' (#83537)</li><li>Add option to set scrollcontainer for lazyloading in indexbrowsing, new property added in default settings '$scrollContainer' (#85307)</li></ul></li></ul></li><li><p><strong>Component TableVertical</strong></p><ul><li><span>Added</span><ul><li>Modern Layout for vertical table (#83653)</li><li>Show ERP-icons (#90283)</li><li>Table icons f.e. pinned, filtered, ... (#90523)</li></ul></li></ul></li><li><p><strong>Component dialogBase</strong></p><ul><li><span>Fixed</span><ul><li>If you have dialog in iframe, dialog size is no longer dependent on iframe size (#85501)</li><li>Block events on underlying elements when dialog is open (#79825)</li></ul></li></ul></li><li><p><strong>Component assistant</strong></p><ul><li><span>Fixed</span><ul><li>Component is able to set the size of it's parent container, new property added in default settings 'parentAutoHeight' (#83537)</li><li>Calculation assistants do not work (#100007)</li></ul></li></ul></li><li><p><strong>Component tableHorizontal</strong></p><ul><li><span>Fixed</span><ul><li>Component is able to set the size of it's parent container, new property added in default settings 'parentAutoHeight' (#83537)</li></ul></li></ul></li></ul><h2 id="4.1.0">[4.1.0]</h2><ul><li><p><strong>Component WebViewer3D</strong></p><ul><li><span>Added</span><ul><li>Initially hide labels (#91925)</li><li>Allow disabling of clickable dimensions (#89305)</li></ul></li><li><span>Fixed</span><ul><li>Mediump precision in shader for devices which don't support highp (#90113)</li><li>Cleanup while cut mode is active (#90175)</li><li>Part is being cut in orthographic mode (#91441)</li><li>Corrected transparent parts (#93141)</li><li>Raycast with orthographic camera (#93189)</li></ul></li></ul></li></ul><h2 id="4.0">[4.0] - 2017-06-28</h2><ul><li><p><strong>Component WebViewer2D</strong></p><ul><li><span>Added</span><ul><li>Use vector Icons (#64857)</li></ul></li><li><span>Fixed</span><ul><li>Don't do zoom all when resize(#85021)</li><li>Prevent special modes like VR, anaglyph, dreamoc etc to be active simultaneously (#89483)</li><li>Prevent INVALID_STATE_ERR exception on edge/windows when closing html5viewer (#89573)</li></ul></li></ul></li><li><p><strong>Component WebViewer3D</strong></p><ul><li><span>Added</span><ul><li>External call to zoom to a hotspot (#84671)</li><li>Animate centering (#84817)</li><li>Added description of label button in help dialog (#85077)</li><li>Disable camera background, when environments are active (#85223)</li><li>Added possibility to open hotspot when rotating to it via api call (#85881)</li><li>The "current folder" in the Catalog-Dir type hotspot is now clickable (#85901)</li><li>Updated WebVR Polyfill to 0.9.25 with some little changes on our fork (#85977)</li><li>Updated jsZip to 3.1.3 (#85985)</li><li>Alphabetic navigation can be enabled with enableAlphabeticNavigation in IndexBrowsing constructor (#85997)</li><li>Add possibility to show the name of the part when hovering over it (#86511)</li><li>Load content of hotspot when it is opened, not before (#87283)</li><li>Using Progress event as loading indicator hot HotSpot content while loading (#87239)</li><li>Bluebox view mode (#86311)</li><li>Create a "change option" function for modifing the options in cnsthree (#87245)</li><li>Generate font for edit symbol in dimension text (#87555)</li><li>Webviewer click dimensions to edit them (#87519)</li><li>Instead of thirdparty font use the three.js one from node_modules (#87365)</li><li>Prepare toolchain + documentation of own ttf to typeface (#87563)</li><li>First rendering when cubemap is loaded (#87759)</li><li>Add click position to mappedVar callback (#88793)</li><li>Use vector Icons (#64857)</li><li>Single rendering of objects (#88045)</li><li>Change color of inline editable lines (#88845)</li><li>Render Materials (#47887)</li><li>Add tooltipp for hotspots title (#89013)</li><li>Fullscreen for images in imageviewer (#88985)</li><li>Add flag for disabling silhuette (#89201)</li><li>Update WebVR-Polyfill to v0.9.35 (#85977)</li></ul></li><li><span>Fixed</span><ul><li>LeapMotion for WebComponents now per default false</li><li>Make 'shadeMode' in cnsthree into an ENUM (#83311)</li><li>Make rotation sensitive according to distance to user (#84727)</li><li>Orientation of dimension values (#84773)</li><li>Made direction of automatic rotation fit PARTdatamanager (#84847)</li><li>When returning from dreamoc mode -> check for correct orientation (#8520</li><li>Reset camera state when moving mouse out of the WebViewer (#85969)</li><li>Rotating a model while moving with the cursor out of the 3D viewer should not lead to selecting text (#86541)</li><li>Movement/Zooming after using "teleport functionality" (#85909)</li><li>On resize IE creates new labels without removing the old ones (#87079)</li><li>Movement/Zooming after using "teleport functionality" (#85909)</li><li>if rotating to and open a hotspot, the other opened hotspots should automatically get closed (#86537)</li><li>WebGL viewer bug labels (#86919)</li><li>Silhuette isn't displayed correctly (#87141)</li><li>Check if type and subtype of hotspot is known before creating it (#87167)</li><li>Prevent multiple requests for content in hotspot (#86933)</li><li>Remove system.min.js from thirdparty (#87347)</li><li>Update STL loader (take from node_modules) and make PR on three.js (#86931)</li><li>fade out and hide line and hotspot at the same time (#86533)</li><li>Fix loading of content in partcloud model hotspot (#87953)</li><li>Hide hotspots when taking a screenshot (#88379)</li><li>Initial position of hotspots (#88301)</li><li>Show complete title and "show more" (#87991)</li><li>Baseline of inline editing is now correct (#88843)</li><li>VR - Part is missing if it goes off screen (#89735)</li><li>Turning on/off hotspot while in anaglyph view, zooms in the part (#89821)</li><li>Anaglyph shouldn't be available in orthographic mode (#89827)</li></ul></li></ul></li><li><p><strong>Component IndexBrowsing</strong></p><ul><li><span>Added</span><ul><li>Added functionality to filter index nodes before rendering -> filterIndexNodes() (#85185)</li><li>Add alphabetic navigation (#85997)</li><li>Add back buttons (#85999)</li></ul></li></ul></li><li><p><strong>Component ViewBase</strong></p><ul><li><span>Added</span><ul><li>Added possibility to handle errors occuring when trying to lock orientation (#87241)</li><li>Let compositeImagesByUrl be passed several images and load all images parallel (#87641)</li></ul></li></ul></li></ul><h2 id="3.1.0">[3.1.0]</h2><ul><li><p><strong>Component WebViewer3D</strong></p><ul><li><span>Fixed</span><ul><li>Handling of wrong ZJV dimensiontext (#89153)</li><li>3D preview's clipping plane problems on long profiles in orthographic mode (#88809)</li></ul></li></ul></li></ul><h2 id="3.0.0">[3.0.0] - 2016-10-12</h2><ul><li><p><strong>Component CubeSketcher</strong></p><ul><li><span>Added</span><ul><li>ButtonBar is now part of the component instead of view (#79361)</li><li>ImageEditor functionality added to CubeSketcher (#80523)</li><li>Only one button instead of two for loading and making images using an input field(#83577)</li></ul></li><li><span>Fixed</span><ul><li>Transparent parts now don't also hide parts behind them (#88245)</li><li>Invisible lines "hide" visible ones, if they are overlapping (#88207)</li></ul></li></ul></li><li><p><strong>Component IndexBrowsing</strong></p><ul><li><span>Added</span><ul><li>onNodeClicked node contains parents when possible (#81273)</li></ul></li><li><span>Fixed</span><ul><li>Show correct name for cloud collections</li></ul></li></ul></li><li><p><strong>Component SketchImageEditor</strong></p><ul><li><span>Added</span><ul><li>Added this component as replacement for old ViewImageEditor (#80523)</li></ul></li></ul></li><li><p><strong>Component WebViewer2D</strong></p><ul><li><span>Fixed</span><ul><li>loadByPJVData() incorrectly renders canvas below psol-comp-webviewer2d-render-area (#83467)</li><li>Layout of WebViewer2D (#84851)</li></ul></li></ul></li><li><p><strong>Component WebViewer3D</strong></p><ul><li><span>Added</span><ul><li>Added Quill as Rich Text Editor for HotSpots (#79567)</li><li>Added Functionality to add/edit/delete HotSpots to parts (#79567)</li><li>Added a hotspot preview for the HotSpots (#80917)</li><li>Implement a possibility for users of the webviewer/hotspots to use a callback to catch the clicks on 'a href'-tags (#81081)</li><li>Add functionality to disable the line/sphere of the hotspot (#80911)</li><li>Help text/images for each hotspot type. Shown in the hotspot dialog (#80837)</li><li>Support multi language for hotspot (#81073)</li><li>Set a maximum for the size of images uploaded via the html type HotSpot (#81101)</li><li>Improved rendering performance (#81177, #81175, #80895)</li><li>Made shader code more maintainable, put into .vert/.frag files (#79081)</li><li>Added possibility to reset environment in the environment dialog (#79229)</li><li>Adjustable line length for HotSpots (#82697)</li><li>Hide HotSpot helper and mark HotSpot when hovering over HotSpot with enabled HotSpot mode (#82821)</li><li>Added possibility to save the camera position/rotation for each HotSpot and animate to it, when HotSpot was clicked (#82695)</li><li>Implemented a "Point and Click Navigation" (#82701)</li><li>Move Camera Background function from VR menu to Additional Functions menu (#83261)</li><li>Api to set transparency value (#83269)</li><li>Wrong position of hard lines (#88121)</li></ul></li><li><span>Fixed</span><ul><li>Make labels unclickable if they have no "big text" (#81965)</li><li>ake care of wrong normals when creating a HotSpot (#82699)</li><li>Initial scaling of HotSpots (#82693)</li><li>Fix initial axis orientation of various parts (#82851)</li><li>Fixed correct canexplode functionality (#82869)</li><li>Fixed touch controls for cut mode on windows 10 Edge browser (#74173)</li><li>Use real slerp instead of simple mixing parameters (#83207)</li><li>Cut Mode now don't crash Edge browser anymore (#80511)</li><li>Background image is now rendered even after canvas size changed (#86753)</li></ul></li></ul></li><li><p><strong>Core UI</strong></p><ul><li><span>Added</span><ul><li>Added psol-comp-viewbase-progress-bar classes</li></ul></li></ul></li><li><p><strong>Core</strong></p><ul><li><span>Added</span><ul><li>export brite to psol.thirdparty.brite</li></ul></li><li><span>Fixed</span><ul><li>psol.exports.getExportFileUrlAsync(), psol.exports.getExportFileContentAsync() and psol.exports.convertFileAsync() accept ajax options</li></ul></li></ul></li></ul><h2 id="2.2.3">[2.2.3]</h2><ul><li><p><strong>Component WebViewer2D</strong></p><ul><li><span>Fixed</span><ul><li>When techviews are pictures, then no longer make 2 requests and add missing request parameters (#83631)</li></ul></li></ul></li></ul><h2 id="2.2.0">[2.2.0]</h2><ul><li><p><strong>Component WebViewer3D</strong></p><ul><li><span>Fixed</span><ul><li>Environment Dialog in fullscreen mode (#79227)</li><li>Multiple labels with the same name can be dislayed (#77165)</li></ul></li></ul></li></ul><h2 id="2.1.0">[2.1.0]</h2><ul><li><p><strong>Component Assistant</strong></p><ul><li><span>Fixed</span><ul><li>Display and handling of checkboxes (#80473, #80395)</li></ul></li></ul></li><li><p><strong>Component IndexBrowsing</strong></p><ul><li><span>Fixed</span><ul><li>Prevent page scrolling when (#76757)</li><li>Handling of 2D DATABASE projects</li></ul></li></ul></li><li><p><strong>Component Table</strong></p><ul><li><span>Fixed</span><ul><li>Disable sticky table for Internet Explorer 9</li></ul></li></ul></li><li><p><strong>Component WebViewer3D</strong></p><ul><li><span>Added</span><ul><li>Camera Background button is now disabled when no camera available (#79721)</li><li>Leapmotion button is now disabled when no device connected (#79719)</li><li>Hide dimension lines when going into explosion view (#81087)</li></ul></li><li><span>Fixed</span><ul><li>VR Mode on iPhone 6 (#80615)</li><li>Blacklisting for iPhone 4 and 5 (#80727)</li><li>Initial position of component/controls in VR mode on android when starting VR in portrait mode (#80635)</li><li>Round position of lables, for sharper rendering</li></ul></li></ul></li><li><p><strong>Component CubeSketcher</strong></p><ul><li><span>Added</span><ul><li>Images loaded from photo library or taken with camera can now be rotated before put on the cube</li></ul></li></ul></li><li><p><strong>Core UI</strong></p><ul><li><span>Added</span><ul><li>Hide defected images</li></ul></li><li><span>Fixed</span><ul><li>Prevent copy images per drag and drop (#79669)</li><li>Use max width for select elements (#80687)</li></ul></li></ul></li><li><p><strong>Core</strong></p><ul><li><span>Fixed</span><ul><li><code>psol.color.getHTML()</code> returns correct strings with '0' paddings</li><li>Use virtual path in index nodes for failing services like RFQ</li></ul></li></ul></li></ul><h2 id="2.0.0">[2.0.0] - 2016-06-22</h2><ul><li><p><strong>Component Assistant</strong></p><ul><li><span>Added</span><ul><li>This is the new Assistant component, it replaces the old CalcAssistant, FilterAssistant and SearchAssistant components</li></ul></li><li><span>Fixed</span><ul><li>Layout of footer, and techviews (#77643, #79233)</li></ul></li></ul></li><li><p><strong>Component Camera</strong></p><ul><li><span>Fixed</span><ul><li>Prefer back camera (#77921)</li></ul></li></ul></li><li><p><strong>Component IndexBrowsing</strong></p><ul><li><span>Added</span><ul><li>Add list view style (#75605)</li><li>Add PARTcloud implementation</li><li>Add images for project types and dirs (#77469)</li><li>Request full resolution images for better display on high DPI devices</li></ul></li><li><span>Fixed</span><ul><li>Appending of index nodes (#77941)</li><li>Multiline ellipsis for texts</li><li>Sizing of nodes on iOS</li></ul></li></ul></li><li><p><strong>Component MessageDialog</strong></p><ul><li><span>Added</span><ul><li>Add a MessageDialog component (#58099)</li></ul></li></ul></li><li><p><strong>Component MapViewer</strong></p><ul><li><span>Fixed</span><ul><li>Problem causing further usage not to work (#77545)</li><li>Rezoom after location change (#77561)</li></ul></li></ul></li><li><p><strong>Component SearchBar</strong></p><ul><li><span>Fixed</span><ul><li>Grey round reset button(#79343)</li></ul></li></ul></li><li><p><strong>Component WebViewer3D</strong></p><ul><li><span>Added</span><ul><li>Add help page (#73309)</li><li>Shade mode can be configured (#79053)</li><li>180° rotation of dimension texts when they are upside down (#78885)</li></ul></li><li><span>Fixed</span><ul><li>Radial menu is not displayed when actions are empty (#75283)</li><li>Set scrolling away from a model to a maximum (#77823)</li><li>Show camera toggle button only when camera is active</li><li>Fit Dimensions when mesh instead of camera is rotated (#78149)</li></ul></li></ul></li><li><p><strong>Component WebViewer2D</strong></p><ul><li><span>Added</span><ul><li>Add help page (#73309)</li></ul></li><li><span>Fixed</span><ul><li>Stop progress and show error when view could not be loaded (#78851)</li><li>Fit text in intial zoom (#76299)</li><li>Show camera toggle button only when camera is active</li></ul></li></ul></li><li><p><strong>Core UI</strong></p><ul><li><span>Added</span><ul><li>Added input appendix, input classes for success, warn, error</li><li>Added class for full size flex item</li></ul></li><li><span>Fixed</span><ul><li>Disable native dropdown arrow on IE >= 10 (#78311)</li><li>Changed default style of buttons</li></ul></li></ul></li><li><p><strong>Core</strong></p><ul><li><span>Added</span><ul><li>add tabrestriction for <code>psol.index.getTableInfoAsync()</code></li></ul></li><li><span>Fixed</span><ul><li>FormData handling for <code>psol.core.ajaxPost()</code></li><li>Use cadqualifier.asp for cad format list (#79557)</li><li>Images and folders are now built in lower case format (#79055)</li></ul></li></ul></li></ul><h2 id="1.0.1392">[1.0.1392]</h2><ul><li><p><strong>Component WebViewer3D</strong></p><ul><li><span>Added</span><ul><li>Load geometry file (e.g.: STL) with <code>loadByGeomFile()</code> (#76979)</li></ul></li><li><span>Fixed</span><ul><li>Get rid of wired characters in dimension text (#77865)</li><li>Problem with display of arrows in dimensions (#78385)</li><li>Loading compare via <code>loadCompareByFileAndPrj()</code> (#78403)</li></ul></li></ul></li><li><p><strong>Component Table</strong></p><ul><li><span>Fixed</span><ul><li>If all cols fit, no scrolling where possible if sticky is disable (#78235)</li><li>Break variablenames if too long, to see more of the value col</li></ul></li></ul></li><li><p><strong>Component FilterAssistant</strong></p><ul><li><span>Fixed</span><ul><li>Use service base url as root for images (#78517)</li></ul></li></ul></li><li><p><strong>Core</strong></p><ul><li><span>Added</span><ul><li><code>psol.order.orderData()</code> add downloadflags parameter (defaults to 'XML')</li></ul></li></ul></li></ul><h2 id="1.0.1142">[1.0.1142]</h2><ul><li><p><strong>Component WebViewer3D</strong></p><ul><li><span>Added</span><ul><li>Holographic view for smartphones (#75951)</li><li>Shader settings(#76033)</li></ul></li></ul></li><li><p><strong>Component WebViewer2D</strong></p><ul><li><span>Fixed</span><ul><li>Prevent page scrolling when (#76757)</li><li>Handling of 2D DATABASE projects</li></ul></li></ul></li></ul><h2 id="1.0.x">[1.0.x] - 2015-02-25</h2><ul><li><p><strong>Initial Release</strong></p><ul></ul></li></ul>
+  </div>
+</body>
+
+</html>

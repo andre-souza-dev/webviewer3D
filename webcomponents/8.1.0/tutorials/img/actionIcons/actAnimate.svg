@@ -1,0 +1,22 @@
+<svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 96 96">
+  <defs>
+    <style>
+      .border-thick {
+        fill: none;
+        stroke: #5b6166;
+        stroke-linejoin: round;
+        stroke-width: 3px;
+      }
+
+      .solid-dark {
+        fill: #5b6166;
+      }
+    </style>
+  </defs>
+  <g id="actAnimate">
+    <path class="border-thick" d="M37.51,10.21C21.22,12,5.74,19,5.74,27.21c0,9.66,19.37,17.5,42.77,17.5s41.75-7.84,41.75-17.5c0-8.26-13.65-15.18-33.2-17"/>
+    <polygon class="solid-dark" points="59 17 45 10 59 3 59 17"/>
+    <path class="solid-dark" d="M68,56V91H28V56H68m3-3H25V94H71V53Z"/>
+    <path class="solid-dark" d="M44,63.27l12.74,8.06a2,2,0,0,1,.1,3.34L44,82.73a2,2,0,0,1-3-1.66V64.93A2,2,0,0,1,44,63.27Z"/>
+  </g>
+</svg>

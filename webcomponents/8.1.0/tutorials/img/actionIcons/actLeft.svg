@@ -1,0 +1,44 @@
+<svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 96 96">
+  <defs>
+    <style>
+      .border-thin, .border-thin--transparent--dashed {
+        fill: none;
+        stroke: #5b6166;
+        stroke-width: 1.5px;
+      }
+
+      .border-thin--transparent--dashed {
+        stroke-miterlimit: 10;
+        stroke-dasharray: 6;
+      }
+
+      .border-thin--transparent--dashed, .transparent-medium {
+        opacity: 0.5;
+      }
+
+      .solid-dark {
+        fill: #5b6166;
+      }
+
+      .transparent-medium {
+        fill: #acafb2;
+      }
+
+      .border-thin {
+        stroke-linejoin: round;
+      }
+    </style>
+  </defs>
+  <g id="actLeft">
+    <path class="border-thin--transparent--dashed" d="M40.5,7V58"/>
+    <line class="border-thin--transparent--dashed" x1="89.5" y1="58" x2="40.5" y2="58"/>
+    <line class="border-thin--transparent--dashed" x1="40.5" y1="58" x2="6.5" y2="89"/>
+    <polygon class="solid-dark" points="6.5 89 40.5 58 40.5 7 6.5 39 6.5 89"/>
+    <rect class="transparent-medium" x="6.5" y="39" width="51" height="50"/>
+    <path class="transparent-medium" d="M57.5,39l32-32V58l-32,31Z"/>
+    <polygon class="transparent-medium" points="6.5 39 57.5 39 89.5 7 40.5 7 6.5 39"/>
+    <rect class="border-thin" x="6.5" y="39" width="51" height="50"/>
+    <path class="border-thin" d="M57.5,39l32-32V58l-32,31Z"/>
+    <polygon class="border-thin" points="6.5 39 57.5 39 89.5 7 40.5 7 6.5 39"/>
+  </g>
+</svg>

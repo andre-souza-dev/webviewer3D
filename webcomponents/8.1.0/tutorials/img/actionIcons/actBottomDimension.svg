@@ -1,0 +1,65 @@
+<svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 96 96">
+  <defs>
+    <style>
+      .border-thick, .border-thin, .border-thin--transparent--dashed {
+        fill: none;
+        stroke: #5b6166;
+      }
+
+      .border-thick, .border-thin {
+        stroke-linejoin: round;
+      }
+
+      .border-thick {
+        stroke-width: 3px;
+      }
+
+      .solid-dark {
+        fill: #5b6166;
+      }
+
+      .border-thin--transparent--dashed {
+        stroke-miterlimit: 10;
+        stroke-dasharray: 6;
+      }
+
+      .border-thin, .border-thin--transparent--dashed {
+        stroke-width: 1.5px;
+      }
+
+      .border-thin--transparent--dashed, .transparent-medium {
+        opacity: 0.5;
+      }
+
+      .transparent-medium {
+        fill: #acafb2;
+      }
+    </style>
+  </defs>
+  <g id="actBottomDimension">
+    <line class="border-thick" x1="50.96" y1="88.5" x2="15.83" y2="88.5"/>
+    <polygon class="solid-dark" points="47.46 85 50.97 88.5 47.46 92 50.43 92 53.93 88.5 50.43 85 47.46 85"/>
+    <polygon class="solid-dark" points="20.2 85 16.7 88.5 20.2 92 17.23 92 13.73 88.5 17.23 85 20.2 85"/>
+    <g>
+      <g>
+        <path class="border-thin--transparent--dashed" d="M40.51,18.48V56.74"/>
+        <line class="border-thin--transparent--dashed" x1="77.27" y1="56.74" x2="40.51" y2="56.74"/>
+        <line class="border-thin--transparent--dashed" x1="40.51" y1="56.74" x2="15" y2="80"/>
+      </g>
+      <g>
+        <polygon class="solid-dark" points="15 80 53.26 80 77.27 56.74 40.51 56.74 15 80"/>
+        <rect class="transparent-medium" x="15" y="42.49" width="38.26" height="37.51"/>
+        <path class="transparent-medium" d="M53.26,42.49l24-24V56.74L53.26,80Z"/>
+        <polygon class="transparent-medium" points="15 42.49 53.26 42.49 77.27 18.48 40.51 18.48 15 42.49"/>
+      </g>
+      <g>
+        <rect class="border-thin" x="15" y="42.49" width="38.26" height="37.51"/>
+        <path class="border-thin" d="M53.26,42.49l24-24V56.74L53.26,80Z"/>
+        <polygon class="border-thin" points="15 42.49 53.26 42.49 77.27 18.48 40.51 18.48 15 42.49"/>
+      </g>
+    </g>
+    <line class="border-thick" x1="63.27" y1="85.01" x2="85.14" y2="63.14"/>
+    <polygon class="solid-dark" points="68.72 84 64 84 64 79.29 62 81.29 62 86 66.71 86 68.72 84"/>
+    <polygon class="solid-dark" points="84 68.72 84 64 79.29 64 81.29 62 86 62 86 66.71 84 68.72"/>
+  </g>
+</svg>
